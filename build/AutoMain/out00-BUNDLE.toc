@@ -1,0 +1,1 @@
+([('AutoMain', '/同步/资料4Mac/运泰利in坚果/AutoMaster/dist/AutoMain', 'EXECUTABLE')],)

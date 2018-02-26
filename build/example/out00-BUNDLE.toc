@@ -1,3 +1,0 @@
-([('example',
-   '/Users/sziaz0015/Documents/GitHub/pluginbase/dist/example',
-   'EXECUTABLE')],)
