@@ -1,0 +1,11 @@
+('/同步/资料4Mac/运泰利in坚果/AutoMaster/build/Main/setuptools-28.8.0-py3.6.egg',
+ None,
+ {'*.pyo', '*.pyd', '*.py', '*.pyc', 'EGG-INFO', '*.so'},
+ 'DATA',
+ [('setuptools/script.tmpl',
+   '/同步/资料4Mac/运泰利in坚果/AutoMaster/build/Main/setuptools-28.8.0-py3.6.egg/setuptools/script.tmpl',
+   'DATA'),
+  ('setuptools/script (dev).tmpl',
+   '/同步/资料4Mac/运泰利in坚果/AutoMaster/build/Main/setuptools-28.8.0-py3.6.egg/setuptools/script '
+   '(dev).tmpl',
+   'DATA')])

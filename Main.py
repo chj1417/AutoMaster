@@ -25,6 +25,7 @@ logging.getLogger('').addHandler(console)
 
 # logging.basicConfig(filename='TestLog.log', level=logging.DEBUG,datefmt='%d %H:%M:%S')
 # logging.Formatter(fmt=None, datefmt=None)
+
 # AutoMaster项目执行环境工作路径可作为相对路径使用
 maindir=os.getcwd()
 here = maindir + '/Cmaster'
@@ -76,16 +77,18 @@ class Application(object):
 
 
 def run_demo(app, source):
+    runlist=[]
     # 执行应用的插件函数内容
     """Shows all formatters in demo mode of an application."""
     logging.info('runing %s:' % app.name)
     # print(app.formatters.items())
     # 排列了，注意插件里面setup的名称，例如增加0001，0002即可控制执行顺序
     for name, fmt in sorted(app.formatters.items()):
+        runlist.append(name)
         #主执行函数
         logging.info('  %10s: %s' % (name, fmt(source)))
 
-    logging.info('') #打印换行
+    logging.info('=====>'+str(runlist)) #打印换行
 
 
 def main():
@@ -127,6 +130,67 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
     # python版本信息
     logging.warning('====version  '+str(sys.version_info[0])+'=====')
+    # 以下为该项目的执行模块配置,注意区分模块名称>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    # 导入登陆模块
+    from Login import LoadWin as r1
+    # 导入
+    # from LangManTool import LoadWin as r2
+
+
+    # 中间函数，定义条件执行case>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    def condition(para):
+        if para == 'loginok':
+            # print(StrCheck.check().login)
+            # return StrCheck.check().login
+            return 1
+        else:
+            # print(type(para),para)
+            return para
+
+
+    # 定义执行模块,[#执行列表[模块名称class,等待结束bool，执行条para,标签，跳转标签],,,]>>>>>>>>>>>>>
+    runmodle = [
+        [r1, 1, 1, 'loginwin', ''],
+        # [r2, 1, 'loginok', '主界面', ''],  # 序列模式
+        # [r2,1,'loginok','主界面','登陆界面'], #回转模式
+        # [r1,1, 1,'其他界面',''], #序列模式demo加
+
+    ]
+    # 链式执行方式
+    index = 0
+    while 1:
+        taskname = []
+        for task in runmodle:
+            taskname.append(task[3])
+        tasknow = runmodle[index]
+        cango = 0
+        if condition(tasknow[2]):
+            m = tasknow[0]()
+            try:
+                m.show()
+                if tasknow[1]:
+                    # 使用exec_进行等待阻塞
+                    cango = m.exec_()
+            except:
+                QDialog=QtWidgets.QDialog()
+                m.setupUi(QDialog)
+                QDialog.show()
+                if tasknow[1]:
+                    # 使用exec_进行等待阻塞
+                    cango = QDialog.exec_()
+
+        # 接管窗口close函数的cango=1，使用esc或直接关闭窗体cango=0
+        if cango:
+            if tasknow[4] == '':
+                index += 1
+            else:
+                try:
+                    index = taskname.index(tasknow[4])
+                except ValueError as e:
+                    logging.error(str(e))
+        else:
+            break
+    # 关闭项目
     main()
 
 
