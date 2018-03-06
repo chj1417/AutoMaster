@@ -1,20 +1,18 @@
-missing module named resource - imported by posix, X:\AutoMaster\AutoMain.py
-missing module named posix - imported by os, X:\AutoMaster\AutoMain.py
-missing module named _posixsubprocess - imported by subprocess, X:\AutoMaster\AutoMain.py
-missing module named org - imported by pickle, X:\AutoMaster\AutoMain.py
-missing module named readline - imported by cmd, code, pdb, X:\AutoMaster\AutoMain.py
-excluded module named _frozen_importlib - imported by importlib, importlib.abc, X:\AutoMaster\AutoMain.py
-missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, X:\AutoMaster\AutoMain.py
-missing module named _winreg - imported by platform, X:\AutoMaster\AutoMain.py
-missing module named _scproxy - imported by urllib.request
-missing module named java - imported by platform, X:\AutoMaster\AutoMain.py
-missing module named 'java.lang' - imported by platform, X:\AutoMaster\AutoMain.py, xml.sax._exceptions
-missing module named vms_lib - imported by platform, X:\AutoMaster\AutoMain.py
-missing module named termios - imported by tty, X:\AutoMaster\AutoMain.py, getpass
-missing module named grp - imported by shutil, tarfile, X:\AutoMaster\AutoMain.py
-missing module named 'org.python' - imported by copy, X:\AutoMaster\AutoMain.py, xml.sax
-missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, X:\AutoMaster\AutoMain.py, netrc, getpass
-missing module named _dummy_threading - imported by dummy_threading, X:\AutoMaster\AutoMain.py
+missing module named 'org.python' - imported by pickle, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py, xml.sax
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py
+missing module named _winreg - imported by platform, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py
+missing module named java - imported by platform, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py
+missing module named 'java.lang' - imported by platform, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py
+missing module named msvcrt - imported by subprocess, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py, getpass
+missing module named _winapi - imported by subprocess, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py
+missing module named winreg - imported by platform, mimetypes, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py, urllib.request
+missing module named nt - imported by os, ntpath, shutil, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py
+missing module named org - imported by copy, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py
+missing module named _dummy_threading - imported by dummy_threading, /同步/资料4Mac/运泰利in坚果/AutoMaster/AutoMain.py
 missing module named __builtin__ - imported by pluginbase
 missing module named cStringIO - imported by pluginbase
 missing module named copy_reg - imported by cStringIO
+missing module named netbios - imported by uuid
+missing module named win32wnet - imported by uuid

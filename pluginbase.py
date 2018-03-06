@@ -20,7 +20,7 @@ import threading
 from types import ModuleType
 from weakref import ref as weakref
 
-
+#获取编译器的版本
 PY2 = sys.version_info[0] == 2
 if PY2:
     text_type = unicode
