@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
+import configparser
 import os
 import sys
 import logging
+import JCheck
 from PyQt5 import QtWidgets
 
 from functools import partial
@@ -30,6 +32,7 @@ logging.getLogger('').addHandler(console)
 maindir=os.getcwd()
 here = maindir + '/Cmaster'
 sys.path.append(here)
+inifile=maindir+'/bin/CoreConfig.ini'
 
 get_path = partial(os.path.join, here)
 # 注意："app_name/plugins"和'./builtin_plugins'文件夹内不允许非插件规格的py文件，其他后缀可以
@@ -74,7 +77,32 @@ class Application(object):
     def register_formatter(self, name, formatter):
         """A function a plugin can use to register a formatter."""
         self.formatters[name] = formatter
+def check_ini(section,key,value):
+    if (not os.path.exists(inifile)):
+        inif = open(inifile, "w")
+        inif.close()
+    cf = configparser.ConfigParser()
+    cf.read(inifile)
+    if (not cf.has_option(section,key)):
+        if (not cf.has_section(section)):
+            cf.add_section(section)
+        cf.set(section,key,value)
+        if value!='':
+            cf.write(open(inifile, "w"))
+        logging.warning("[NewConfig %s ] %s ='%s'" %(section,key,value))
+    return cf
 
+def read_ini(section, key,value=''):
+    # 键key不存在且有传递value非空的时候，进行写入文件操作
+    cf=check_ini(section,key,value)
+    value = cf.get(section, key)
+    return value
+
+def write_ini(section, key, value):
+    cf=check_ini(section,key,'')
+    cf.set(section, key, value)
+    # write to file
+    cf.write(open(inifile, "w"))
 
 def run_demo(app, source):
     runlist=[]
@@ -107,16 +135,16 @@ def main():
         app1 = Application('app1')
         app2 = Application('app2')
     except Exception as e:
-        logging.warning('app1 and app2 '+str(e))
+        logging.error('app1 and app2 '+str(e))
     # Run the demo for both
     try:
         run_demo(app1, source)
     except Exception as e:
-        logging.warning('demo1 '+str(e))
+        logging.error('demo1 '+str(e))
     try:
         run_demo(app2, source)
     except Exception as e:
-        logging.warning('demo2 ' + str(e))
+        logging.error('demo2 ' + str(e))
     # And just to show how the import system works, we also showcase
     # importing plugins regularly:
 
@@ -128,34 +156,61 @@ def main():
 if __name__ == '__main__':
 
     app = QtWidgets.QApplication(sys.argv)
+    # app.setQuitOnLastWindowClosed(True)
     # python版本信息
     logging.warning('====version  '+str(sys.version_info[0])+'=====')
     # 以下为该项目的执行模块配置,注意区分模块名称>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     # 导入登陆模块
-    from Login import LoadWin as r1
-    # 导入
+    from Login1 import LoadWin as l1
+    from Login2 import LoadWin as l2
+    # 导入向导模块
     # from LangManTool import LoadWin as r2
+    # 导入主体模块
+    from GUI.MainWindow import MainWindow as m1
+    # 模块列表
+    modlels=[
+        #登陆模块
+        [l1,l2],
+        #向导模块
+        [l1, l2],
+        #主体模块
+        [m1,l2]
+    ]
+    # 名称列表
+    m_names=['Login','Guide','Main']
+    # 标签列表
+    m_lables=['loginwin','guidewin','mainwin']
+    # 执行条件列表
+    m_condition=[1,'loginok',1]
 
+    # 模块配置文件初始化
+    runmodle=[]
+    for i,mns in enumerate(m_names):
+        write_ini('Core','%s-Style'%mns,'Null or 0 to %d'%(len(modlels[i])-1))
+        write_ini('Core','%s-Lable'%mns,m_lables[i])
+        if read_ini('Core', '%s-Next'%mns)=='':
+            write_ini('Core', '%s-Next'%mns,'') # 空键值也要保留在Core中
+        configstr=read_ini('Running', mns, '0') #获取模块style配置，初始值为执行0主题
+        if configstr!='':
+            # Running中键值非空则执行
+            temp2run=[]
+            temp2run.append(modlels[i][int(configstr)]) # 对应导入模块的modlels[][]
+            temp2run.append(1) # 是否等待该模块结束才执行下一模块
+            temp2run.append(m_condition[i]) # 执行条件，传递参数到condition函数的para中
+            temp2run.append(m_lables[i]) # 当前模块标签
+            temp2run.append(read_ini('Core', '%s-Next'%mns)) #跳转模块标签
+            # 执行列表[模块名称class,等待结束bool，执行条para,标签，跳转标签
+            runmodle.append(temp2run)
 
     # 中间函数，定义条件执行case>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     def condition(para):
         if para == 'loginok':
-            # print(StrCheck.check().login)
-            # return StrCheck.check().login
-            return 1
+            # 查询登陆状态
+            return JCheck.check().login
         else:
             # print(type(para),para)
             return para
 
-
-    # 定义执行模块,[#执行列表[模块名称class,等待结束bool，执行条para,标签，跳转标签],,,]>>>>>>>>>>>>>
-    runmodle = [
-        [r1, 1, 1, 'loginwin', ''],
-        # [r2, 1, 'loginok', '主界面', ''],  # 序列模式
-        # [r2,1,'loginok','主界面','登陆界面'], #回转模式
-        # [r1,1, 1,'其他界面',''], #序列模式demo加
-
-    ]
     # 链式执行方式
     index = 0
     while 1:
@@ -170,8 +225,12 @@ if __name__ == '__main__':
                 m.show()
                 if tasknow[1]:
                     # 使用exec_进行等待阻塞
-                    cango = m.exec_()
-            except:
+                    try:
+                        cango = m.exec_()
+                    except Exception as e:
+                        logging.error(str(e))
+            except Exception as e:
+                logging.error(str(e))
                 QDialog=QtWidgets.QDialog()
                 m.setupUi(QDialog)
                 QDialog.show()
@@ -183,6 +242,8 @@ if __name__ == '__main__':
         if cango:
             if tasknow[4] == '':
                 index += 1
+                if index>=len(runmodle):
+                    break
             else:
                 try:
                     index = taskname.index(tasknow[4])
@@ -190,7 +251,12 @@ if __name__ == '__main__':
                     logging.error(str(e))
         else:
             break
+    # 执行功能主体
+    # main()
+    # main_window = m1()
+    # main_window.show()
+    # main_window.exec_()
     # 关闭项目
-    main()
+    sys.exit(app.exec())
 
 

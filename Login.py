@@ -2,38 +2,17 @@
 
 # Form implementation generated from reading ui file 'Login.ui'
 #
-# Created by: PyQt5 UI code generator 5.10.1
+# Created by: PyQt5 UI code generator 5.6
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtGui import QMovie, QPixmap
-import os
-import logging
-import time
 
-class TimeThread(QtCore.QThread):
-    signal = QtCore.pyqtSignal(str) # 信号
-    def __init__(self, parent=None):
-        super(TimeThread, self).__init__(parent)
-        self.working = True
-        self.looptime = 0
-
-    def start_timer(self,tpara):
-        self.looptime = tpara
-        self.start()
-    def stop(self):
-        self.working= False
-    def run(self):
-        while self.working:
-            showtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-            self.signal.emit(showtime)  # 发送信号
-            self.sleep(self.looptime)
 class LoadWin(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.setWindowModality(QtCore.Qt.NonModal)
-        Dialog.resize(200, 100)
+        Dialog.resize(316, 216)
         Dialog.setStyleSheet("")
         Dialog.setSizeGripEnabled(False)
         Dialog.setModal(False)
@@ -53,8 +32,7 @@ class LoadWin(object):
         self.grouppic.setMinimumSize(QtCore.QSize(90, 90))
         self.grouppic.setMaximumSize(QtCore.QSize(90, 90))
         self.grouppic.setText("")
-        self.picli=["./bin/admin.png","./bin/user.png","./bin/viewer.png","./bin/welcome.gif"]##################
-        self.grouppic.setPixmap(QtGui.QPixmap(self.picli[0]))
+        self.grouppic.setPixmap(QtGui.QPixmap("Resource/user.png"))
         self.grouppic.setScaledContents(True)
         self.grouppic.setAlignment(QtCore.Qt.AlignBottom|QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing)
         self.grouppic.setObjectName("grouppic")
@@ -160,29 +138,28 @@ class LoadWin(object):
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.welcome.sizePolicy().hasHeightForWidth())
-        if os.path.exists(self.picli[3]):
-            self.welcome.setSizePolicy(sizePolicy)
-            self.welcome.setLayoutDirection(QtCore.Qt.LeftToRight)
-            self.welcome.setAutoFillBackground(True)
-            self.welcome.setText("")
-            self.welcome.setScaledContents(True)
-            self.welcome.setAlignment(QtCore.Qt.AlignCenter)
-            self.welcome.setObjectName("welcome")
-            self.gridLayout.addWidget(self.welcome, 0, 0, 1, 1)
-            #########
-            mv = QMovie(self.picli[3])
-            self.welcome.setMovie(mv)
-            mv.start()
+        self.welcome.setSizePolicy(sizePolicy)
+        self.welcome.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.welcome.setAutoFillBackground(True)
+        self.welcome.setText("")
+        self.welcome.setScaledContents(True)
+        self.welcome.setAlignment(QtCore.Qt.AlignCenter)
+        self.welcome.setObjectName("welcome")
+        self.gridLayout.addWidget(self.welcome, 0, 0, 1, 1)
+        self.actionrecord = QtWidgets.QAction(Dialog)
+        self.actionrecord.setObjectName("actionrecord")
 
         self.retranslateUi(Dialog)
-        self.group.currentIndexChanged['int'].connect(self.changegroud)
-        self.loginbtn.clicked.connect(self.clicklogin)
+        self.group.currentIndexChanged['int'].connect(self.grouppic.update)
+        self.loginbtn.clicked.connect(Dialog.accept)
+        self.actionrecord.triggered.connect(self.user.update)
+        self.actionrecord.triggered.connect(self.pwd.update)
+        self.actionrecord.triggered.connect(self.group.update)
+        self.actionrecord.triggered.connect(self.welcome.update)
+        self.actionrecord.triggered.connect(self.timenow.update)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
         Dialog.setTabOrder(self.user, self.pwd)
         Dialog.setTabOrder(self.pwd, self.group)
-        self.timer_t = TimeThread()
-        self.timer_t.signal.connect(self.timeeven)
-        self.timer_t.start_timer(1)
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
@@ -194,20 +171,7 @@ class LoadWin(object):
         self.UserLabel.setText(_translate("Dialog", "username"))
         self.PassLabel.setText(_translate("Dialog", "password"))
         self.label.setText(_translate("Dialog", "Version V 1.0.0"))
+        self.timenow.setText(_translate("Dialog", "TextLabel"))
         self.loginbtn.setText(_translate("Dialog", "login"))
-    def timeeven(self,timestr):
-        self.timenow.setText(timestr)
-    def clicklogin(self):
-        groupli=['Admin','Operator','Viewer']
-        logging.info('longin %s=%s'%(groupli[self.group.currentIndex()],self.user.text()))
-    def changegroud(self):
-        self.grouppic.setPixmap(QPixmap(self.picli[self.group.currentIndex()]))
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    Dialog = QtWidgets.QDialog()
-    ui = LoadWin()
-    ui.setupUi(Dialog)
-    Dialog.show()
-    sys.exit(app.exec_())
+        self.actionrecord.setText(_translate("Dialog", "record"))
 

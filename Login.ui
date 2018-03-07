@@ -334,16 +334,16 @@
   <connection>
    <sender>loginbtn</sender>
    <signal>clicked()</signal>
-   <receiver>pwd</receiver>
-   <slot>update()</slot>
+   <receiver>Dialog</receiver>
+   <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>295</x>
      <y>227</y>
     </hint>
     <hint type="destinationlabel">
-     <x>247</x>
-     <y>120</y>
+     <x>157</x>
+     <y>107</y>
     </hint>
    </hints>
   </connection>

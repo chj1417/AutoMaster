@@ -1,14 +1,5 @@
-06,15:47:02 Main.py[<module>:45] INFO /var/folders/zh/_l1w9w916hdgtg8tj9f1hpy80000gn/T/_MEIBcosEa/base_library.zip
-06,15:47:02 Main.py[<module>:45] INFO /var/folders/zh/_l1w9w916hdgtg8tj9f1hpy80000gn/T/_MEIBcosEa
-06,15:47:02 Main.py[<module>:132] WARNING ====version  3=====
-06,15:49:38 Main.py[run_demo:83] INFO runing app1:
-06,15:49:38 Main.py[run_demo:89] INFO   00lowercase: this is a cool demo text to show this functionality.
-06,15:49:38 Main.py[run_demo:89] INFO   01uppercase: THIS IS A COOL DEMO TEXT TO SHOW THIS FUNCTIONALITY.
-06,15:49:38 Main.py[run_demo:89] INFO      03print: my  print
-06,15:49:38 Main.py[run_demo:89] INFO     04secret: xxxx xx x xxxx xxxx xxxx xx xxxx xxxx xxxxxxxxxxxxx.
-06,15:49:38 Main.py[run_demo:91] INFO =====>['00lowercase', '01uppercase', '03print', '04secret']
-06,15:49:38 Main.py[run_demo:83] INFO runing app2:
-06,15:49:38 Main.py[run_demo:89] INFO   00lowercase: this is a cool demo text to show this functionality.
-06,15:49:38 Main.py[run_demo:89] INFO   01uppercase: THIS IS A COOL DEMO TEXT TO SHOW THIS FUNCTIONALITY.
-06,15:49:39 Main.py[run_demo:89] INFO       random: tAAR KQ L nkmV koTr mXAW cQ dCXs enmZ cyGMoxfQCtJqe.
-06,15:49:39 Main.py[run_demo:91] INFO =====>['00lowercase', '01uppercase', 'random']
+07,17:58:54 Main.py[<module>:48] INFO C:\Users\SZIAZ0~1\AppData\Local\Temp\_MEI59322\base_library.zip
+07,17:58:54 Main.py[<module>:48] INFO C:\Users\SZIAZ0~1\AppData\Local\Temp\_MEI59322
+07,17:58:54 Main.py[<module>:48] INFO X:\AutoMaster/Cmaster
+07,17:58:54 Main.py[<module>:161] WARNING ====version  3=====
+07,17:58:55 Main.py[<module>:231] ERROR 'MainWindow' object has no attribute 'exec_'
