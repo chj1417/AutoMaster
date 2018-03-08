@@ -166,7 +166,7 @@ if __name__ == '__main__':
     # 导入向导模块
     # from LangManTool import LoadWin as r2
     # 导入主体模块
-    from GUI.MainWindow import MainWindow as m1
+    from Cmaster.MainWindow import MainWindow as m1
     # 模块列表
     modlels=[
         #登陆模块
@@ -253,9 +253,6 @@ if __name__ == '__main__':
             break
     # 执行功能主体
     # main()
-    # main_window = m1()
-    # main_window.show()
-    # main_window.exec_()
     # 关闭项目
     sys.exit(app.exec())
 
