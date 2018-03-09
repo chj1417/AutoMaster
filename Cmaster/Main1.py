@@ -2,7 +2,11 @@
 # 负责主体窗体构建
 # 负责控件构建的公用部分，例如图标按键的add_acttion()
 
+from PyQt5.QtCore import *
+from PyQt5.QtGui import QKeySequence as QKSec
+from Cmaster.Button import IconButton
 from Cmaster.Icons import get_icon
+from Cmaster.Textbox import Textbox
 from Cmaster.Widget import *
 from Cmaster.HCore import Config
 
@@ -94,7 +98,30 @@ class MainWindow(QMainWindow):
             action.setShortcuts(shortcut)
         self.addAction(action)
         return action
-    # 重入主体关闭事件
+
+    def init_ribbon(self):
+        home_tab = self._ribbon.add_ribbon_tab("Home")
+        file_pane = home_tab.add_ribbon_pane("File")
+        file_pane.add_ribbon_widget(IconButton(self, self._open_action, True))
+        # file_pane.add_ribbon_widget(IconButton(self, self._save_action, True))
+
+        edit_panel = home_tab.add_ribbon_pane("Edit")
+        # edit_panel.add_ribbon_widget(IconButton(self, self._copy_action, True))
+        # edit_panel.add_ribbon_widget(IconButton(self, self._paste_action, True))
+        grid = edit_panel.add_grid_widget(200)
+        grid.addWidget(QLabel("Text box 1"), 1, 1)
+        grid.addWidget(QLabel("Text box 2"), 2, 1)
+        grid.addWidget(QLabel("Text box 3"), 3, 1)
+        grid.addWidget(self._text_box1, 1, 2)
+        grid.addWidget(self._text_box2, 2, 2)
+        grid.addWidget(self._text_box3, 3, 2)
+
+        view_panel = home_tab.add_ribbon_pane("View")
+        # view_panel.add_ribbon_widget(IconButton(self, self._zoom_action, True))
+        home_tab.add_spacer()
+
+        # print(self,'----')
+
     # def closeEvent(self, close_event):
     #     pass
 
