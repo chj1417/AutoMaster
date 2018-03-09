@@ -1,5 +1,8 @@
-09,10:26:34 Main.py[<module>:161] WARNING ====version  3=====
-09,10:26:34 Main1.py[run_builder:49] INFO runing about:
-09,10:26:34 Main1.py[run_builder:54] INFO   00 build tab: ok
-09,10:26:34 Main1.py[run_builder:56] INFO =====>['00 build tab']
-09,10:26:34 Main.py[<module>:231] ERROR 'MainWindow' object has no attribute 'exec_'
+09,17:25:45 Main.py[<module>:69] INFO ***version 3***
+09,17:25:46 Main1.py[run_builder:52] INFO -=Runing      home=-
+09,17:25:46 Main1.py[run_builder:61] INFO ==BuildList==['0000 home']
+09,17:25:46 Main1.py[run_builder:52] INFO -=Runing      edit=-
+09,17:25:46 Main1.py[run_builder:61] INFO ==BuildList==['1000 edit']
+09,17:25:46 Main1.py[run_builder:52] INFO -=Runing     about=-
+09,17:25:46 Main1.py[run_builder:61] INFO ==BuildList==['9000 about']
+09,17:25:46 Main.py[<module>:139] ERROR 'MainWindow' object has no attribute 'exec_'

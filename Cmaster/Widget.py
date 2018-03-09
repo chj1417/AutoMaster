@@ -10,7 +10,7 @@ class Widget(QToolBar):
         QToolBar.__init__(self, parent)
         self.setStyleSheet(get_stylesheet("Widget"))
         self.setObjectName("ribbonWidget")
-        self.setWindowTitle("Ribbon")
+        self.setWindowTitle("ToolBar")
         self._ribbon_widget = QTabWidget(self)
         self._ribbon_widget.setMaximumHeight(140*gui_scale())
         self._ribbon_widget.setMinimumHeight(110*gui_scale())
