@@ -5,6 +5,7 @@ import sys
 import logging
 import JCheck
 from PyQt5 import QtWidgets
+from PyQt5.QtCore import *
 
 from functools import partial
 from pluginbase import PluginBase
@@ -43,9 +44,6 @@ get_path = partial(os.path.join, here)
 # 加入内建插件函数（应用app的plugins注册的函数内与内建的重名时会覆盖执行）
 plugin_base = PluginBase(package='plugins',
                          searchpath=[get_path('./builtin_plugins')])
-#
-for pathnow in sys.path:
-    logging.info(pathnow)
 
 class Application(object):
     """Represents a simple example application."""
@@ -154,6 +152,8 @@ def main():
 
 
 if __name__ == '__main__':
+    #去除警告
+    QtWidgets.QApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
 
     app = QtWidgets.QApplication(sys.argv)
     # app.setQuitOnLastWindowClosed(True)
@@ -166,7 +166,7 @@ if __name__ == '__main__':
     # 导入向导模块
     # from LangManTool import LoadWin as r2
     # 导入主体模块
-    from Cmaster.MainWindow import MainWindow as m1
+    from Cmaster.Main1 import MainWindow as m1
     # 模块列表
     modlels=[
         #登陆模块
