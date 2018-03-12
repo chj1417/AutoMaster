@@ -10,11 +10,7 @@ import sys
 import logging
 import JCheck
 from PyQt5 import QtWidgets
-from PyQt5.QtCore import *
-
-from functools import partial
-from pluginbase import PluginBase
-
+from Hinclude import *
 
 # 引入日志系统
 logging.basicConfig(level=logging.DEBUG,
@@ -63,7 +59,6 @@ def write_ini(section, key, value):
     # write to file
     cf.write(open(inifile, "w"))
 
-
 if __name__ == '__main__':
     #去除警告
     QtWidgets.QApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
@@ -71,8 +66,7 @@ if __name__ == '__main__':
     _sys_argv=sys.argv
     app = QtWidgets.QApplication(_sys_argv)
     for i,cmd in enumerate(_sys_argv):
-        write_ini('syscmd','text%s'%i,str(cmd))
-
+        write_ini('Sys','cmd%s'%i,str(cmd))
     # app.setQuitOnLastWindowClosed(True)
     # python版本信息
     logging.info('***version %s***'%str(sys.version_info[0]))
@@ -85,7 +79,6 @@ if __name__ == '__main__':
     # 导入主体模块
 
     from Cmaster.Main1 import MainWindow as m1
-
     # 模块列表
     modlels=[
         #登陆模块

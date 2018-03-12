@@ -2,11 +2,6 @@
 # 负责主体窗体构建
 # 负责控件构建的公用部分，例如图标按键的add_acttion()
 
-from PyQt5.QtCore import *
-from PyQt5.QtGui import QKeySequence as QKSec
-from Cmaster.Button import IconButton
-from Cmaster.Textbox import Textbox
-
 from Cmaster.Widget import *
 from Cmaster.HCore import Config
 from Cmaster.Icons import get_icon
