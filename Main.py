@@ -36,58 +36,18 @@ here = maindir + '/Cmaster'
 sys.path.append(here)
 inifile=maindir+'/bin/CoreConfig.ini'
 
-get_path = partial(os.path.join, here)
-# 注意："app_name/plugins"和'./builtin_plugins'文件夹内不允许非插件规格的py文件，其他后缀可以
-# 插件规范，必须包含def setup(app): 函数定义
-
-# Setup a plugin base for "example.modules" and make sure to load
-# all the default built-in plugins from the builtin_plugins folder.
-# 加入内建插件函数（应用app的plugins注册的函数内与内建的重名时会覆盖执行）
-plugin_base = PluginBase(package='plugins',
-                         searchpath=[get_path('./builtin_plugins')])
-
-class Application(object):
-    """Represents a simple example application."""
-
-    def __init__(self, name):
-        # Each application has a name
-        self.name = name
-
-        # And a dictionary where it stores "formatters".  These will be
-        # functions provided by plugins which format strings.
-        self.formatters = {}
-
-        # and a source which loads the plugins from the "app_name/plugins"
-        # folder.  We also pass the application name as identifier.  This
-        # is optional but by doing this out plugins have consistent
-        # internal module names which allows pickle to work.
-
-        self.source = plugin_base.make_plugin_source(
-            searchpath=[get_path('./%s/plugins' % name)],
-            identifier=self.name)
-
-        # Here we list all the plugins the source knows about, load them
-        # and the use the "setup" function provided by the plugin to
-        # initialize the plugin.
-        for plugin_name in self.source.list_plugins():
-            plugin = self.source.load_plugin(plugin_name)
-            plugin.setup(self) #插件必须包含def setup(app): 函数定义
-
-    def register_formatter(self, name, formatter):
-        """A function a plugin can use to register a formatter."""
-        self.formatters[name] = formatter
 def check_ini(section,key,value):
     if (not os.path.exists(inifile)):
-        inif = open(inifile, "w")
+        inif = open(inifile, "w",encoding='UTF-8')
         inif.close()
     cf = configparser.ConfigParser()
-    cf.read(inifile)
+    cf.read(inifile,encoding='UTF-8')
     if (not cf.has_option(section,key)):
         if (not cf.has_section(section)):
             cf.add_section(section)
         cf.set(section,key,value)
         if value!='':
-            cf.write(open(inifile, "w"))
+            cf.write(open(inifile, "w",encoding='UTF-8'))
         logging.warning("[NewConfig %s ] %s ='%s'" %(section,key,value))
     return cf
 
@@ -103,60 +63,16 @@ def write_ini(section, key, value):
     # write to file
     cf.write(open(inifile, "w"))
 
-def run_demo(app, source):
-    runlist=[]
-    # 执行应用的插件函数内容
-    """Shows all formatters in demo mode of an application."""
-    logging.info('runing %s:' % app.name)
-    # print(app.formatters.items())
-    # 排列了，注意插件里面setup的名称，例如增加0001，0002即可控制执行顺序
-    for name, fmt in sorted(app.formatters.items()):
-        runlist.append(name)
-        #主执行函数
-        logging.info('  %10s: %s' % (name, fmt(source)))
-
-    logging.info('=====>'+str(runlist)) #打印换行
-
-
-def main():
-    logging.info('[maindir]' + str(maindir))
-
-    # 顺序执行的主函数主体
-    # This is the demo string we want to format.
-    source = ['This is a cool demo text to show this functionality.','ok']
-
-    # Set up two applications.  One loads plugins from ./app1/plugins
-    # and the second one from ./app2/plugins.  Both will also load
-    # the default ./builtin_plugins.
-    # 注意文件夹名称
-    try:
-        pass
-        app1 = Application('app1')
-        app2 = Application('app2')
-    except Exception as e:
-        logging.error('app1 and app2 '+str(e))
-    # Run the demo for both
-    try:
-        run_demo(app1, source)
-    except Exception as e:
-        logging.error('demo1 '+str(e))
-    try:
-        run_demo(app2, source)
-    except Exception as e:
-        logging.error('demo2 ' + str(e))
-    # And just to show how the import system works, we also showcase
-    # importing plugins regularly:
-
-    # with app1.source:
-    #     from plugins import secret
-    #     print('Plugin module: %s' % secret)
-
 
 if __name__ == '__main__':
     #去除警告
     QtWidgets.QApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
+    # 寄存系统指令
+    _sys_argv=sys.argv
+    app = QtWidgets.QApplication(_sys_argv)
+    for i,cmd in enumerate(_sys_argv):
+        write_ini('syscmd','text%s'%i,str(cmd))
 
-    app = QtWidgets.QApplication(sys.argv)
     # app.setQuitOnLastWindowClosed(True)
     # python版本信息
     logging.info('***version %s***'%str(sys.version_info[0]))
@@ -167,7 +83,9 @@ if __name__ == '__main__':
     # 导入向导模块
     # from LangManTool import LoadWin as r2
     # 导入主体模块
+
     from Cmaster.Main1 import MainWindow as m1
+
     # 模块列表
     modlels=[
         #登陆模块
@@ -183,26 +101,35 @@ if __name__ == '__main__':
     m_lables=['loginwin','guidewin','mainwin']
     # 执行条件列表
     m_condition=[1,'loginok',1]
-
     # 模块配置文件初始化
     runmodle=[]
-    for i,mns in enumerate(m_names):
-        write_ini('Core','%s-Style'%mns,'Null or 0 to %d'%(len(modlels[i])-1))
-        write_ini('Core','%s-Lable'%mns,m_lables[i])
-        if read_ini('Core', '%s-Next'%mns)=='':
-            write_ini('Core', '%s-Next'%mns,'') # 空键值也要保留在Core中
-        configstr=read_ini('Running', mns, '0') #获取模块style配置，初始值为执行0主题
-        if configstr!='':
-            # Running中键值非空则执行
-            temp2run=[]
-            temp2run.append(modlels[i][int(configstr)]) # 对应导入模块的modlels[][]
-            temp2run.append(1) # 是否等待该模块结束才执行下一模块
-            temp2run.append(m_condition[i]) # 执行条件，传递参数到condition函数的para中
-            temp2run.append(m_lables[i]) # 当前模块标签
-            temp2run.append(read_ini('Core', '%s-Next'%mns)) #跳转模块标签
-            # 执行列表[模块名称class,等待结束bool，执行条para,标签，跳转标签
-            runmodle.append(temp2run)
-
+    try:
+        for i,mns in enumerate(m_names):
+            try:
+                write_ini('Core','%s-Style'%mns,'Null or 0 to %d'%(len(modlels[i])-1))
+                write_ini('Core','%s-Lable'%mns,m_lables[i])
+            except Exception as e:
+                logging.error('ini'+str(e))
+            if read_ini('Core', '%s-Next'%mns)=='':
+                write_ini('Core', '%s-Next'%mns,'') # 空键值也要保留在Core中
+            configstr=read_ini('Running', mns, '0') #获取模块style配置，初始值为执行0主题
+            if configstr!='':
+                try:
+                    # Running中键值非空则执行
+                    temp2run=[]
+                    temp2run.append(modlels[i][int(configstr)]) # 对应导入模块的modlels[][]
+                    temp2run.append(1) # 是否等待该模块结束才执行下一模块
+                    temp2run.append(m_condition[i]) # 执行条件，传递参数到condition函数的para中
+                    temp2run.append(m_lables[i]) # 当前模块标签
+                    temp2run.append(read_ini('Core', '%s-Next'%mns)) #跳转模块标签
+                    # 执行列表[模块名称class,等待结束bool，执行条para,标签，跳转标签
+                    runmodle.append(temp2run)
+                except Exception as e:
+                    logging.error('temp2run'+str(e))
+    except Exception as e:
+        logging.error(e)
+    finally:
+        logging.info('Loading Success')
     # 中间函数，定义条件执行case>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
     def condition(para):
         if para == 'loginok':
@@ -214,7 +141,9 @@ if __name__ == '__main__':
 
     # 链式执行方式
     index = 0
+    _need_appexec=False
     while 1:
+        # logging.info('running into while index=%s'%index)
         taskname = []
         for task in runmodle:
             taskname.append(task[3])
@@ -228,17 +157,22 @@ if __name__ == '__main__':
                     # 使用exec_进行等待阻塞
                     try:
                         cango = m.exec_()
+                    except AttributeError:
+                        # 窗体不存在exec的需要app的exec来阻塞，例如Main1不阻塞界面显示就关闭来
+                        _need_appexec=True
                     except Exception as e:
-                        logging.error(str(e))
-            except Exception as e:
-                logging.error(str(e))
+                        logging.error(e)
+            except AttributeError:
+                # 直接pyuic不存在show的界面使用setupUI
                 QDialog=QtWidgets.QDialog()
                 m.setupUi(QDialog)
                 QDialog.show()
                 if tasknow[1]:
                     # 使用exec_进行等待阻塞
                     cango = QDialog.exec_()
-
+                    pass
+            except Exception as e:
+                logging.error(e)
         # 接管窗口close函数的cango=1，使用esc或直接关闭窗体cango=0
         if cango:
             if tasknow[4] == '':
@@ -253,6 +187,9 @@ if __name__ == '__main__':
         else:
             break
     # 关闭项目
-    sys.exit(app.exec())
+    if _need_appexec:
+        sys.exit(app.exec())
+    else:
+        sys.exit()
 
 

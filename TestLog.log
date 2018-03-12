@@ -1,9 +1,2 @@
-10,02:13:53 Main.py[<module>:162] INFO ***version 3***
-10,02:13:56 Login2.py[accept:47] INFO Longin Admin=admin
-10,02:13:56 Main1.py[run_builder:56] INFO -=Runing      home=-
-10,02:13:56 Main1.py[run_builder:65] INFO ==BuildList==['0000 home']
-10,02:13:56 Main1.py[run_builder:56] INFO -=Runing      edit=-
-10,02:13:56 Main1.py[run_builder:65] INFO ==BuildList==['1000 edit']
-10,02:13:56 Main1.py[run_builder:56] INFO -=Runing     about=-
-10,02:13:56 Main1.py[run_builder:65] INFO ==BuildList==['9000 about']
-10,02:13:56 Main.py[<module>:232] ERROR 'MainWindow' object has no attribute 'exec_'
+12,11:06:18 Main.py[<module>:78] INFO ***version 3***
+12,11:06:18 Main.py[<module>:132] INFO Loading Success

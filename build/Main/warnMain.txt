@@ -6,11 +6,11 @@ missing module named java - imported by platform, /同步/资料4Mac/运泰利in
 missing module named 'java.lang' - imported by platform, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py, xml.sax._exceptions
 missing module named vms_lib - imported by platform, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
 missing module named winreg - imported by platform, mimetypes, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py, urllib.request
+missing module named 'org.python' - imported by copy, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py, xml.sax
 missing module named nt - imported by os, ntpath, shutil, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
 missing module named msvcrt - imported by subprocess, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py, getpass
 missing module named _winapi - imported by subprocess, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
 missing module named _dummy_threading - imported by dummy_threading, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
-missing module named 'org.python' - imported by copy, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py, xml.sax
 missing module named __builtin__ - imported by pluginbase
 missing module named cStringIO - imported by pluginbase
 missing module named copy_reg - imported by cStringIO
