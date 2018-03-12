@@ -18,12 +18,13 @@ from Cmaster.Button import IconButton
 
 # 定义事件函数>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def on_open(para):
-    print(para)
+    # print(para)
     rootwin=para['root']
     _dock_widget = QDockWidget(rootwin)
     _dock_widget.setObjectName("Dock4File");
     _dock_widget.setWindowTitle("dock4file")
     rootwin.addDockWidget(Qt.RightDockWidgetArea, _dock_widget)
+    # print(Qt.RightDockWidgetArea)
     # return 'ok'
 def on_save(para):
     print('--==save==--')

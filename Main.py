@@ -12,6 +12,9 @@ import JCheck
 from PyQt5 import QtWidgets
 from Hinclude import *
 
+# from PyQt5.QtCore import QTranslator
+
+
 # 引入日志系统
 logging.basicConfig(level=logging.DEBUG,
                 format='%(asctime)s %(filename)s[%(funcName)s:%(lineno)d] %(levelname)s %(message)s',
@@ -67,6 +70,12 @@ if __name__ == '__main__':
     app = QtWidgets.QApplication(_sys_argv)
     for i,cmd in enumerate(_sys_argv):
         write_ini('Sys','cmd%s'%i,str(cmd))
+    # 语言国际化，CHJ试验失败，暂不知如何使用
+    # trans = QTranslator()
+    # trans.load("./bin/zh_CN") # 没有后缀.qm
+    # app.installTranslator(trans)
+
+
     # app.setQuitOnLastWindowClosed(True)
     # python版本信息
     logging.info('***version %s***'%str(sys.version_info[0]))
@@ -86,7 +95,7 @@ if __name__ == '__main__':
         #向导模块
         [l1, l2],
         #主体模块
-        [m1,l2]
+        [m1,]
     ]
     # 名称列表
     m_names=['Login','Guide','Main']

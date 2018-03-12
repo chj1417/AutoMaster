@@ -4,12 +4,13 @@
     <list default="true" id="2d1b2b31-7038-46e9-be39-3c2fedbb9978" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Cmaster/Main1.py" afterPath="$PROJECT_DIR$/Cmaster/Main1.py" />
-      <change beforePath="$PROJECT_DIR$/Main new.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Cmaster/about/plugins/about.py" afterPath="$PROJECT_DIR$/Cmaster/about/plugins/about.py" />
+      <change beforePath="$PROJECT_DIR$/Cmaster/home/plugins/home.py" afterPath="$PROJECT_DIR$/Cmaster/home/plugins/home.py" />
       <change beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
       <change beforePath="$PROJECT_DIR$/TestLog.log" afterPath="$PROJECT_DIR$/TestLog.log" />
-      <change beforePath="$PROJECT_DIR$/backup/Main.exe" afterPath="$PROJECT_DIR$/backup/Main.exe" />
       <change beforePath="$PROJECT_DIR$/bin/CoreConfig.ini" afterPath="$PROJECT_DIR$/bin/CoreConfig.ini" />
       <change beforePath="$PROJECT_DIR$/bin/Main" afterPath="$PROJECT_DIR$/bin/Main" />
+      <change beforePath="$PROJECT_DIR$/build/Main/Main.exe.manifest" afterPath="" />
       <change beforePath="$PROJECT_DIR$/build/Main/base_library.zip" afterPath="$PROJECT_DIR$/build/Main/base_library.zip" />
       <change beforePath="$PROJECT_DIR$/build/Main/out00-Analysis.toc" afterPath="$PROJECT_DIR$/build/Main/out00-Analysis.toc" />
       <change beforePath="$PROJECT_DIR$/build/Main/out00-EXE.toc" afterPath="$PROJECT_DIR$/build/Main/out00-EXE.toc" />
@@ -19,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/build/Main/out00-PYZ.toc" afterPath="$PROJECT_DIR$/build/Main/out00-PYZ.toc" />
       <change beforePath="$PROJECT_DIR$/build/Main/warnMain.txt" afterPath="$PROJECT_DIR$/build/Main/warnMain.txt" />
       <change beforePath="$PROJECT_DIR$/build/Main/xref-Main.html" afterPath="$PROJECT_DIR$/build/Main/xref-Main.html" />
+      <change beforePath="$PROJECT_DIR$/dist/Main.exe" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,24 +31,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-723">
-              <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            <state relative-caret-position="-697">
+              <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+              <folding>
+                <element signature="e#74#93#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tools.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Cmaster/tools/plugins/tools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-583">
+              <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+              <folding>
+                <element signature="e#60#88#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Button.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cmaster/Button.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hinclude.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hinclude.py">
+      <file leaf-file-name="about.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cmaster/about/plugins/about.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
+            <state relative-caret-position="162">
+              <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
               <folding>
-                <element signature="e#13#39#0" expanded="true" />
+                <element signature="e#60#88#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cmaster/home/plugins/home.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cmaster/edit/plugins/edit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1030">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,8 +100,8 @@
       <file leaf-file-name="Main1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cmaster/Main1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+            <state relative-caret-position="270">
+              <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
               <folding>
                 <element signature="e#58#86#0" expanded="true" />
               </folding>
@@ -83,8 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Plugins/__init__.py" />
-        <option value="$PROJECT_DIR$/Plugins/app2/uibox.py" />
         <option value="$PROJECT_DIR$/Plugins/app2/plugins/randomstr.py" />
         <option value="$PROJECT_DIR$/Cmaster/HCore/uibox.py" />
         <option value="$PROJECT_DIR$/Cmaster/Mbox.py" />
@@ -124,16 +168,18 @@
         <option value="$PROJECT_DIR$/Cmaster/builtin_plugins/home.py" />
         <option value="$PROJECT_DIR$/Cmaster/edit/plugins/randomstr.py" />
         <option value="$PROJECT_DIR$/Cmaster/Widget.py" />
-        <option value="$PROJECT_DIR$/Cmaster/home/plugins/home.py" />
         <option value="$PROJECT_DIR$/Cmaster/edit/plugins/edit.py" />
         <option value="$PROJECT_DIR$/Cmaster/HCore/Config.py" />
-        <option value="$PROJECT_DIR$/Cmaster/about/plugins/about.py" />
         <option value="$PROJECT_DIR$/pluginbase.py" />
         <option value="$PROJECT_DIR$/bin/CoreConfig.ini" />
         <option value="$PROJECT_DIR$/Hinclud.py" />
         <option value="$PROJECT_DIR$/Hinclude.py" />
+        <option value="$PROJECT_DIR$/Cmaster/tools/plugins/about.py" />
+        <option value="$PROJECT_DIR$/Cmaster/home/plugins/home.py" />
+        <option value="$PROJECT_DIR$/Cmaster/about/plugins/about.py" />
         <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/Cmaster/Main1.py" />
+        <option value="$PROJECT_DIR$/Cmaster/tools/plugins/tools.py" />
       </list>
     </option>
   </component>
@@ -175,7 +221,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalTools" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -357,10 +403,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/Mbox.py" />
-    <entry file="file://$PROJECT_DIR$/Login2.py" />
-    <entry file="file://$PROJECT_DIR$/JCheck.py" />
-    <entry file="file://$PROJECT_DIR$/CoreConfig.py" />
     <entry file="file://$PROJECT_DIR$/Login.py" />
     <entry file="file://$PROJECT_DIR$/Login1.py" />
     <entry file="file://$PROJECT_DIR$/untitledmain.py" />
@@ -401,11 +443,7 @@
     <entry file="file://$PROJECT_DIR$/Cmaster/edit/plugins/randomstr.py" />
     <entry file="file://$PROJECT_DIR$/Cmaster/Textbox.py" />
     <entry file="file://$PROJECT_DIR$/Cmaster/HCore/Config.py" />
-    <entry file="file://$PROJECT_DIR$/Cmaster/home/plugins/home.py" />
-    <entry file="file://$PROJECT_DIR$/Cmaster/about/plugins/about.py" />
-    <entry file="file://$PROJECT_DIR$/Cmaster/edit/plugins/edit.py" />
     <entry file="file://$PROJECT_DIR$/Cmaster/Widget.py" />
-    <entry file="file://$PROJECT_DIR$/Cmaster/Button.py" />
     <entry file="file://$PROJECT_DIR$/Cmaster/Tab.py" />
     <entry file="file://$PROJECT_DIR$/Main new.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -441,13 +479,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cmaster/Main1.py">
+    <entry file="file://$PROJECT_DIR$/Cmaster/tools/plugins/about.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding>
-            <element signature="e#58#86#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="319">
+          <caret line="25" column="91" lean-forward="false" selection-start-line="25" selection-start-column="91" selection-end-line="25" selection-end-column="91" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -456,16 +492,88 @@
         <state relative-caret-position="0">
           <caret line="0" column="11" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="11" />
           <folding>
-            <element signature="e#13#39#0" expanded="true" />
+            <element signature="e#13#39#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/edit/plugins/edit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1030">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/untitled.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="44" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/Button.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="33" column="21" lean-forward="false" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/about/plugins/zh_CN.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-723">
-          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        <state relative-caret-position="-697">
+          <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+          <folding>
+            <element signature="e#74#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/Main1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <element signature="e#58#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/about/plugins/about.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="26" column="39" lean-forward="false" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding>
+            <element signature="e#60#88#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/home/plugins/home.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="41" column="30" lean-forward="false" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/tools/plugins/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-583">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="e#60#88#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

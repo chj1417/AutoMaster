@@ -20,7 +20,7 @@ def on_license(para):
     print('on license')
 
 def about(para):
-    print(para,'=====++++++++')
+    # print(para,'=====++++++++')
     mainwin=para['root']
     app=para['about']
     # mainwin的函数add_action(caption, icon_name, status_tip, icon_visible, connection, shortcut=None):

@@ -11,7 +11,7 @@ from functools import partial
 import os
 import logging
 
-# os.path.join()：  将多个路径组合后返回
+# 将多个路径组合后返回os.path.join()：
 get_path = partial(os.path.join, os.getcwd()+'/Cmaster')
 # 加入内建插件函数（应用app的plugins注册的函数内与内建的重名时会覆盖执行）
 plugin_base = PluginBase(package='plugins',
@@ -36,7 +36,6 @@ class Builder(object):
             plugin.build(self)  # 插件必须包含def build(app): 负责界面构建
         # 按名称寄存插件引用
         main1para[name]=self
-
 
     def register_guis(self, name, formatter):
         """A function a plugin can use to register a formatter."""
