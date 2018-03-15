@@ -3,6 +3,10 @@
 # 负责构建界面
 # 负责定义构建的界面可能的事件函数
 
+# 导入Qt核心模块
+from PyQt5 import QtWidgets, QtCore
+
+from PyQt5.QtCore import *
 # 快捷键模块
 from PyQt5.QtGui import QKeySequence as QKSec
 
@@ -13,6 +17,26 @@ from Cmaster.Textbox import Textbox
 # IconButtom图形按钮模块
 from Cmaster.Button import IconButton
 
+# 定义编辑窗 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+def edittree(para):
+    rootwin=para['root']
+    tree = QTreeWidget()
+    headerItem = QTreeWidgetItem(["seq", "name", "func", "message",'condition','goto'])
+    item = QTreeWidgetItem()
+    tree.setHeaderItem(headerItem)
+    for i in range(4):
+        parent = QTreeWidgetItem(tree)
+        parent.setText(0, "Parent {}".format(i))
+        parent.setFlags(parent.flags() | Qt.ItemIsTristate | Qt.ItemIsUserCheckable)
+        for x in range(5):
+            child = QTreeWidgetItem(parent)
+            child.setFlags(child.flags() | Qt.ItemIsUserCheckable)
+            child.setText(0, "Child {}".format(x))
+            child.setCheckState(0, Qt.Unchecked)
+    docklay={
+        'V':[tree]
+    }
+    rootwin.auto_dock('editwin',docklay)
 
 # 定义事件函数>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def on_open(para):
@@ -84,6 +108,9 @@ def edit(para):
     view_panel = home_tab.add_ribbon_pane("View")
     view_panel.add_ribbon_widget(IconButton(mainwin, _zoom_action, True))
     home_tab.add_spacer()
+
+    # -------------     Dock            -------------------
+    edittree(para)
 
     return 'edit build finish'
 

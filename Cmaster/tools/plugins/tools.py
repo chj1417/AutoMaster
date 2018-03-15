@@ -2,6 +2,7 @@
 # 插件内容
 # 负责构建界面
 # 负责定义构建的界面可能的事件函数
+from PyQt5.QtCore import *
 
 from Cmaster.Widget import *
 from Cmaster.Button import IconButton,TButton
@@ -68,23 +69,44 @@ def on_lang(para):
 
     rootwin.auto_dock("Language",docklay)
 
-def on_license(para):
-    # file = open('LICENSE', 'r')
-    # lic = file.read()
-    # QMessageBox().information(self, "License", lic)
-    print('on license')
+def on_samp(para):
+    rootwin = para['root']
+    tree = QTreeWidget()
+    headerItem = QTreeWidgetItem(["seq", "name", "func", "message", 'condition', 'goto'])
+    item = QTreeWidgetItem()
+    tree.setHeaderItem(headerItem)
+    for i in range(4):
+        parent = QTreeWidgetItem(tree)
+        parent.setText(0, "Parent {}".format(i))
+        parent.setFlags(parent.flags() | Qt.ItemIsTristate | Qt.ItemIsUserCheckable)
+        for x in range(5):
+            child = QTreeWidgetItem(parent)
+            child.setFlags(child.flags() | Qt.ItemIsUserCheckable)
+            child.setText(0, "Child {}".format(x))
+            child.setCheckState(0, Qt.Unchecked)
+    _dial = QtWidgets.QDial()
+    _dial.setMaximumSize(QtCore.QSize(16777215, 16777215))
+    _dial.setObjectName("dial")
+    docklay = {
+        'H': [tree, _dial]
+    }
+    rootwin.auto_dock('editwin', docklay)
 
 def tools(para):
     mainwin=para['root']
     app=para['tools']
     # -------- Qbuttom ----------
     # mainwin的函数add_action(caption, icon_name, status_tip, icon_visible, appname,eventname, shortcut=None):
-    _about_action = mainwin.add_action("Language", "about", "Program Language", True, 'tools','lang')
+    _about_action = mainwin.add_action("language", "about", "Program Language", True, 'tools','lang')
+    _sample_action = mainwin.add_action("sample", "about", "sample for ui", True, 'tools','sample')
     # -------- Tab --------------
     about_tab = mainwin._ribbon.add_ribbon_tab("Tools")  # Tab Name-----------
     info_panel = about_tab.add_ribbon_pane("Tools")  #Pane Name----------------
+    other_panel =about_tab.add_ribbon_pane("Others")
+
     # Add Button----------
     info_panel.add_ribbon_widget(IconButton(mainwin, _about_action, True))
+    other_panel.add_ribbon_widget(IconButton(mainwin, _sample_action, True))
 
     return 'about build finish'
 def demo(para):
@@ -97,6 +119,7 @@ def setup(app):
 def build(app):
     app.register_guis('8000 tools', tools)
     app.register_events('lang',on_lang)
+    app.register_events('sample',on_samp)
     app.register_events('loadevent',e_load)
     app.register_events('addevent',e_add)
     app.register_events('delevent',e_del)

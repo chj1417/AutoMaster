@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d1b2b31-7038-46e9-be39-3c2fedbb9978" name="Default" comment="" />
+    <list default="true" id="2d1b2b31-7038-46e9-be39-3c2fedbb9978" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Cmaster/HCore/language.py" afterPath="$PROJECT_DIR$/Cmaster/HCore/language.py" />
+      <change beforePath="$PROJECT_DIR$/Cmaster/Main1.py" afterPath="$PROJECT_DIR$/Cmaster/Main1.py" />
+      <change beforePath="$PROJECT_DIR$/Cmaster/edit/plugins/edit.py" afterPath="$PROJECT_DIR$/Cmaster/edit/plugins/edit.py" />
+      <change beforePath="$PROJECT_DIR$/Cmaster/home/plugins/home.py" afterPath="$PROJECT_DIR$/Cmaster/home/plugins/home.py" />
+      <change beforePath="$PROJECT_DIR$/Cmaster/tools/plugins/tools.py" afterPath="$PROJECT_DIR$/Cmaster/tools/plugins/tools.py" />
+      <change beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
+      <change beforePath="$PROJECT_DIR$/Main.spec" afterPath="$PROJECT_DIR$/Main.spec" />
+      <change beforePath="$PROJECT_DIR$/TestLog.log" afterPath="$PROJECT_DIR$/TestLog.log" />
+      <change beforePath="$PROJECT_DIR$/bin/CoreConfig.ini" afterPath="$PROJECT_DIR$/bin/CoreConfig.ini" />
+      <change beforePath="$PROJECT_DIR$/bin/Main" afterPath="$PROJECT_DIR$/bin/Main" />
+      <change beforePath="$PROJECT_DIR$/build/Main/base_library.zip" afterPath="$PROJECT_DIR$/build/Main/base_library.zip" />
+      <change beforePath="$PROJECT_DIR$/build/Main/out00-Analysis.toc" afterPath="$PROJECT_DIR$/build/Main/out00-Analysis.toc" />
+      <change beforePath="$PROJECT_DIR$/build/Main/out00-EXE.toc" afterPath="$PROJECT_DIR$/build/Main/out00-EXE.toc" />
+      <change beforePath="$PROJECT_DIR$/build/Main/out00-PKG.pkg" afterPath="$PROJECT_DIR$/build/Main/out00-PKG.pkg" />
+      <change beforePath="$PROJECT_DIR$/build/Main/out00-PKG.toc" afterPath="$PROJECT_DIR$/build/Main/out00-PKG.toc" />
+      <change beforePath="$PROJECT_DIR$/build/Main/out00-PYZ.pyz" afterPath="$PROJECT_DIR$/build/Main/out00-PYZ.pyz" />
+      <change beforePath="$PROJECT_DIR$/build/Main/out00-PYZ.toc" afterPath="$PROJECT_DIR$/build/Main/out00-PYZ.toc" />
+      <change beforePath="$PROJECT_DIR$/build/Main/warnMain.txt" afterPath="$PROJECT_DIR$/build/Main/warnMain.txt" />
+      <change beforePath="$PROJECT_DIR$/build/Main/xref-Main.html" afterPath="$PROJECT_DIR$/build/Main/xref-Main.html" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,14 +32,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="language.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Cmaster/HCore/language.py">
+      <file leaf-file-name="tools.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cmaster/tools/plugins/tools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
-              <caret line="57" column="52" lean-forward="false" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+            <state relative-caret-position="210">
+              <caret line="90" column="10" lean-forward="false" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
               <folding>
-                <element signature="e#146#178#0" expanded="true" />
+                <element signature="e#59#85#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="uibox.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cmaster/HCore/uibox.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="34" column="31" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -26,7 +57,7 @@
       <file leaf-file-name="Hinclude.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hinclude.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
+            <state relative-caret-position="240">
               <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
               <folding />
             </state>
@@ -36,8 +67,8 @@
       <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2376">
-              <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+            <state relative-caret-position="277">
+              <caret line="72" column="43" lean-forward="false" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -46,15 +77,23 @@
       <file leaf-file-name="Main1.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cmaster/Main1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3456">
-              <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state relative-caret-position="1905">
+              <caret line="127" column="35" lean-forward="false" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="35" />
               <folding>
                 <element signature="e#58#85#0" expanded="true" />
-                <marker date="1521081510528" expanded="true" signature="3051:3360" ph="..." />
-                <marker date="1521081510528" expanded="true" signature="3403:4168" ph="..." />
-                <marker date="1521081510528" expanded="true" signature="3448:4168" ph="..." />
-                <marker date="1521081510528" expanded="true" signature="3622:4133" ph="..." />
-                <marker date="1521081510528" expanded="true" signature="4825:5009" ph="..." />
+                <marker date="1521093972944" expanded="true" signature="3226:3535" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Cmaster/edit/plugins/edit.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="385">
+              <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+              <folding>
+                <element signature="e#71#106#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -63,8 +102,8 @@
       <file leaf-file-name="home.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cmaster/home/plugins/home.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1692">
-              <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+            <state relative-caret-position="90">
+              <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -124,30 +163,29 @@
         <option value="$PROJECT_DIR$/Cmaster/builtin_plugins/home.py" />
         <option value="$PROJECT_DIR$/Cmaster/edit/plugins/randomstr.py" />
         <option value="$PROJECT_DIR$/Cmaster/Widget.py" />
-        <option value="$PROJECT_DIR$/Cmaster/edit/plugins/edit.py" />
         <option value="$PROJECT_DIR$/Cmaster/HCore/Config.py" />
         <option value="$PROJECT_DIR$/pluginbase.py" />
-        <option value="$PROJECT_DIR$/bin/CoreConfig.ini" />
         <option value="$PROJECT_DIR$/Hinclud.py" />
         <option value="$PROJECT_DIR$/Cmaster/tools/plugins/about.py" />
         <option value="$PROJECT_DIR$/Cmaster/about/plugins/about.py" />
-        <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/Cmaster/Button.py" />
         <option value="$PROJECT_DIR$/Cmaster/HCore/uitable.py" />
         <option value="$PROJECT_DIR$/Cmaster/HCore/uibox.py" />
         <option value="$PROJECT_DIR$/Cmaster/Pane.py" />
-        <option value="$PROJECT_DIR$/Cmaster/tools/plugins/tools.py" />
-        <option value="$PROJECT_DIR$/Cmaster/Main1.py" />
-        <option value="$PROJECT_DIR$/Cmaster/home/plugins/home.py" />
         <option value="$PROJECT_DIR$/Hinclude.py" />
+        <option value="$PROJECT_DIR$/Cmaster/home/plugins/home.py" />
         <option value="$PROJECT_DIR$/Cmaster/HCore/language.py" />
+        <option value="$PROJECT_DIR$/Cmaster/Main1.py" />
+        <option value="$PROJECT_DIR$/Cmaster/tools/plugins/tools.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/bin/CoreConfig.ini" />
+        <option value="$PROJECT_DIR$/Cmaster/edit/plugins/edit.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="284" />
-    <option name="width" value="2482" />
-    <option name="height" value="1728" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -175,6 +213,48 @@
             <path>
               <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
               <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+              <item name="bin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+              <item name="Cmaster" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+              <item name="Cmaster" type="462c0819:PsiDirectoryNode" />
+              <item name="edit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+              <item name="Cmaster" type="462c0819:PsiDirectoryNode" />
+              <item name="edit" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+              <item name="Cmaster" type="462c0819:PsiDirectoryNode" />
+              <item name="HCore" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+              <item name="Cmaster" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+              <item name="Cmaster" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -224,6 +304,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="LoginMan" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -241,6 +322,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,6 +340,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="MainWindow" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -275,6 +358,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <configuration name="main 2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -292,6 +376,7 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.Main" />
@@ -327,19 +412,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="284" y="0" width="2482" height="1728" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2882736" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28823113" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31079325" sideWeight="0.5013889" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34099153" sideWeight="0.49861112" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34193122" sideWeight="0.49861112" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -347,6 +432,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -354,7 +440,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -393,13 +479,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Hinclud.py" />
     <entry file="file://$PROJECT_DIR$/Cmaster/tools/plugins/about.py" />
-    <entry file="file://$PROJECT_DIR$/Cmaster/edit/plugins/edit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1030">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/untitled.py" />
     <entry file="file://$PROJECT_DIR$/Cmaster/about/plugins/zh_CN.ts" />
     <entry file="file://$PROJECT_DIR$/Cmaster/stylesheets/SmallButton.css">
@@ -452,13 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/uibox.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="747">
-          <caret line="66" column="14" lean-forward="false" selection-start-line="66" selection-start-column="14" selection-end-line="66" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cmaster/Widget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -487,65 +559,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cmaster/tools/plugins/tools.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/CoreConfig.ini">
+    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/language.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
-          <caret line="72" column="27" lean-forward="false" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
+          <caret line="67" column="29" lean-forward="true" selection-start-line="67" selection-start-column="29" selection-end-line="67" selection-end-column="29" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cmaster/Main1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3456">
-          <caret line="111" column="0" lean-forward="false" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
-          <folding>
-            <element signature="e#58#85#0" expanded="true" />
-            <marker date="1521081510528" expanded="true" signature="3051:3360" ph="..." />
-            <marker date="1521081510528" expanded="true" signature="3403:4168" ph="..." />
-            <marker date="1521081510528" expanded="true" signature="3448:4168" ph="..." />
-            <marker date="1521081510528" expanded="true" signature="3622:4133" ph="..." />
-            <marker date="1521081510528" expanded="true" signature="4825:5009" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cmaster/home/plugins/home.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1692">
-          <caret line="56" column="24" lean-forward="false" selection-start-line="56" selection-start-column="24" selection-end-line="56" selection-end-column="24" />
+        <state relative-caret-position="90">
+          <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/CoreConfig.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="8" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/tools/plugins/tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="90" column="10" lean-forward="false" selection-start-line="90" selection-start-column="10" selection-end-line="90" selection-end-column="10" />
+          <folding>
+            <element signature="e#59#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/uibox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="34" column="31" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Hinclude.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
+        <state relative-caret-position="240">
           <caret line="16" column="39" lean-forward="false" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/language.py">
+    <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="57" column="52" lean-forward="false" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
+        <state relative-caret-position="277">
+          <caret line="72" column="43" lean-forward="false" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/Main1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="127" column="35" lean-forward="false" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="35" />
           <folding>
-            <element signature="e#146#178#0" expanded="true" />
+            <element signature="e#58#85#0" expanded="true" />
+            <marker date="1521093972944" expanded="true" signature="3226:3535" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/edit/plugins/edit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+          <folding>
+            <element signature="e#71#106#0" expanded="true" />
           </folding>
         </state>
       </provider>

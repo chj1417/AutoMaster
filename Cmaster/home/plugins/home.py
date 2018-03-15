@@ -58,10 +58,10 @@ def home(para):
     app=para['home']
     # -------------      actions       -----------------
     _open_action = mainwin.add_action("open", "open", "Open file", True, 'home', 'open', QKSec.Open)
-    _save_action = mainwin.add_action("Save", "save", "Save file", True, 'home', 'save', QKSec.Save)
-    _copy_action = mainwin.add_action("Copy", "copy", "Copy selection", True, 'home', 'copy', QKSec.Copy)
-    _paste_action = mainwin.add_action("Paste", "paste", "Paste from clipboard", True, 'home', 'paste', QKSec.Paste)
-    _zoom_action = mainwin.add_action("Zoom", "zoom", "Zoom in on document", True, 'home', 'zoom')
+    _save_action = mainwin.add_action("save", "save", "Save file", True, 'home', 'save', QKSec.Save)
+    _copy_action = mainwin.add_action("copy", "copy", "Copy selection", True, 'home', 'copy', QKSec.Copy)
+    _paste_action = mainwin.add_action("paste", "paste", "Paste from clipboard", True, 'home', 'paste', QKSec.Paste)
+    _zoom_action = mainwin.add_action("zoom", "zoom", "Zoom in on document", True, 'home', 'zoom')
 
     # ------ textboxes  其changed事件是直接传递了 ------------
 

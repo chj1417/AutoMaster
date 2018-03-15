@@ -1,22 +1,25 @@
-15,11:00:50 Main.py[<module>:81] INFO ***version 3***
-15,11:00:50 Main.py[<module>:134] INFO Loading Success
-15,11:00:50 Main1.py[run_builder:59] INFO -=Runing      home=-
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound Save
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound Copy
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound Paste
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound Zoom
-15,11:00:50 Main1.py[run_builder:68] INFO ==BuildList==['0000 home']
-15,11:00:50 Main1.py[run_builder:59] INFO -=Runing      edit=-
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound Open
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound Save
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound Copy
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound Paste
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound Zoom
-15,11:00:50 Main1.py[run_builder:68] INFO ==BuildList==['1000 edit']
-15,11:00:50 Main1.py[run_builder:59] INFO -=Runing     tools=-
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound Language
-15,11:00:50 Main1.py[run_builder:68] INFO ==BuildList==['8000 tools']
-15,11:00:50 Main1.py[run_builder:59] INFO -=Runing     about=-
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound About
-15,11:00:50 language.py[get:41] WARNING Language Dict NotFound License
-15,11:00:50 Main1.py[run_builder:68] INFO ==BuildList==['9000 about']
+15,14:59:23 Main.py[<module>:73] INFO Sys cmd0 ./bin/main
+15,14:59:23 Main.py[<module>:82] INFO ***version 3***
+15,14:59:23 Main.py[<module>:135] INFO Loading Success
+15,14:59:23 Main1.py[run_builder:59] INFO -=Runing      home=-
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "copy"
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "paste"
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "zoom"
+15,14:59:23 Main1.py[run_builder:68] INFO ==BuildList==['0000 home']
+15,14:59:23 Main1.py[run_builder:59] INFO -=Runing      edit=-
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "Open"
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "Save"
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "Copy"
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "Paste"
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "Zoom"
+15,14:59:23 Main1.py[auto_layout:130] WARNING No Def auto_layout Type <class 'PyQt5.QtWidgets.QDial'> 
+15,14:59:23 Main1.py[run_builder:68] INFO ==BuildList==['1000 edit']
+15,14:59:23 Main1.py[run_builder:59] INFO -=Runing     tools=-
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "language"
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "sample"
+15,14:59:23 Main1.py[run_builder:68] INFO ==BuildList==['8000 tools']
+15,14:59:23 Main1.py[run_builder:59] INFO -=Runing     about=-
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "About"
+15,14:59:23 language.py[get:41] WARNING LanguageDictNotFound "License"
+15,14:59:23 Main1.py[run_builder:68] INFO ==BuildList==['9000 about']
+15,14:59:29 Main1.py[auto_layout:130] WARNING No Def auto_layout Type <class 'PyQt5.QtWidgets.QDial'> 

@@ -65,11 +65,12 @@ def write_ini(section, key, value):
 if __name__ == '__main__':
     #去除警告
     QtWidgets.QApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
-    # 寄存系统指令
+    # 寄存系统指令,待处理
     _sys_argv=sys.argv
     app = QtWidgets.QApplication(_sys_argv)
     for i,cmd in enumerate(_sys_argv):
-        write_ini('Sys','cmd%s'%i,str(cmd))
+        # write_ini('Sys','cmd%s'%i,cmd)
+        logging.info('Sys cmd%s %s'%(i,cmd))
     # 语言国际化，CHJ试验失败，暂不知如何使用
     # trans = QTranslator()
     # trans.load("./bin/zh_CN") # 没有后缀.qm

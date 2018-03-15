@@ -84,7 +84,11 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Main Window %s"%Config.read_key('Main','Title','AutoMaster'))
         self.setDockNestingEnabled(True)
         self.setWindowIcon(get_icon("icon"))
-
+        # 状态栏----
+        self.statusbar = QtWidgets.QStatusBar()
+        self.statusbar.setObjectName("statusbar")
+        self.setStatusBar(self.statusbar)
+        # 工具栏----
         self._ribbon = Widget(self)
         self.addToolBar(self._ribbon)
 
@@ -113,15 +117,18 @@ class MainWindow(QMainWindow):
                 place = QtWidgets.QHBoxLayout()
             for item in list:
                 if isinstance(item, QtWidgets.QSpacerItem):
-                    place.addItem(item)
+                    place.addItem(item) #界面弹簧QSpacerItem
                 elif isinstance(item,dict):
-                    self.auto_layout(place,item)
+                    self.auto_layout(place,item) #递归
                 elif isinstance(item,QtWidgets.QTableWidget):
-                    place.addWidget(item)
+                    place.addWidget(item) # Table表格
                 elif isinstance(item,QtWidgets.QAction):
-                    place.addWidget(TButton(self, item))
+                    place.addWidget(TButton(self, item)) # 简易按钮TButton
+                elif isinstance(item,QtWidgets.QTreeWidget):
+                    place.addWidget(item) # 树Tree
                 else:
-                    logging.warning('No Def auto_layout Type %s '%type(item))
+                    logging.warning('No Def auto_layout Type %s '%type(item)) # 未定义类型
+                    place.addWidget(item)
             panel.addLayout(place)
     def auto_dock(self,dockname,docklay):
         "dockname,docklay{dict}"

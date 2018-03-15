@@ -1,4 +1,16 @@
-missing module named 'win32com.gen_py' - imported by win32com, C:\Users\sziaz0015\AppData\Local\Programs\Python\Python36\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_win32comgenpy.py
+missing module named pyimod03_importers - imported by /Users/sziaz0015/Git-Python/Python/venv/lib/python3.6/site-packages/PyInstaller/loader/rthooks/pyi_rth_pkgres.py
+missing module named StringIO - imported by numpy.lib.utils, numpy.testing.nose_tools.utils, numpy.lib.format, pkg_resources._vendor.six
+missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
+missing module named netbios - imported by uuid
+missing module named win32wnet - imported by uuid
+missing module named __builtin__ - imported by numpy.core.numerictypes, numpy.core.numeric, numpy.distutils.misc_util, numpy.lib.function_base, numpy.lib._iotools, numpy.ma.core, numpy, pluginbase, pkg_resources._vendor.pyparsing
+missing module named ordereddict - imported by pkg_resources._vendor.pyparsing
+missing module named 'win32com.shell' - imported by pkg_resources._vendor.appdirs
+missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
+missing module named com - imported by pkg_resources._vendor.appdirs
+missing module named win32api - imported by distutils.msvccompiler, pkg_resources._vendor.appdirs
+missing module named win32com - imported by pkg_resources._vendor.appdirs
+missing module named __main__ - imported by pkg_resources
 missing module named multiprocessing.SimpleQueue - imported by multiprocessing, concurrent.futures.process
 missing module named multiprocessing.set_start_method - imported by multiprocessing, multiprocessing.spawn
 missing module named multiprocessing.get_start_method - imported by multiprocessing, multiprocessing.spawn
@@ -6,37 +18,24 @@ missing module named multiprocessing.TimeoutError - imported by multiprocessing,
 missing module named multiprocessing.get_context - imported by multiprocessing, multiprocessing.pool, multiprocessing.managers, multiprocessing.sharedctypes
 missing module named multiprocessing.BufferTooShort - imported by multiprocessing, multiprocessing.connection
 missing module named multiprocessing.AuthenticationError - imported by multiprocessing, multiprocessing.connection
-missing module named pyimod03_importers - imported by C:\Users\sziaz0015\AppData\Local\Programs\Python\Python36\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_pkgres.py
-missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
-missing module named com - imported by pkg_resources._vendor.appdirs
-missing module named __builtin__ - imported by numpy.core.numerictypes, numpy.core.numeric, numpy.distutils.misc_util, numpy.lib.function_base, numpy.lib._iotools, numpy.ma.core, numpy, pluginbase, pkg_resources._vendor.pyparsing
-missing module named ordereddict - imported by pkg_resources._vendor.pyparsing
-missing module named StringIO - imported by numpy.lib.utils, numpy.testing.nose_tools.utils, numpy.lib.format, pkg_resources._vendor.six
-missing module named 'pkg_resources.extern.pyparsing' - imported by pkg_resources._vendor.packaging.requirements, pkg_resources._vendor.packaging.markers
-missing module named __main__ - imported by pkg_resources
 missing module named pkg_resources.extern.packaging - imported by pkg_resources.extern, pkg_resources, setuptools.dist, setuptools.command.egg_info
 missing module named pkg_resources.extern.appdirs - imported by pkg_resources.extern, pkg_resources
 missing module named 'pkg_resources.extern.six.moves' - imported by pkg_resources, pkg_resources._vendor.packaging.requirements
-missing module named pkg_resources.extern.six - imported by pkg_resources.extern, pkg_resources
-missing module named 'multiprocessing.forking' - imported by C:\Users\sziaz0015\AppData\Local\Programs\Python\Python36\lib\site-packages\PyInstaller\loader\rthooks\pyi_rth_multiprocessing.py
-missing module named resource - imported by posix, X:\AutoMaster\Main.py
-missing module named posix - imported by os, X:\AutoMaster\Main.py
-missing module named _posixsubprocess - imported by subprocess, multiprocessing.util, X:\AutoMaster\Main.py
-missing module named 'org.python' - imported by pickle, setuptools.sandbox, X:\AutoMaster\Main.py, xml.sax
-missing module named readline - imported by cmd, code, pdb, X:\AutoMaster\Main.py
-excluded module named _frozen_importlib - imported by importlib, importlib.abc, X:\AutoMaster\Main.py
-missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, X:\AutoMaster\Main.py
-missing module named _winreg - imported by platform, numpy.distutils.cpuinfo, X:\AutoMaster\Main.py, pkg_resources._vendor.appdirs
-missing module named _scproxy - imported by urllib.request
-missing module named java - imported by platform, X:\AutoMaster\Main.py
-missing module named 'java.lang' - imported by platform, X:\AutoMaster\Main.py, xml.sax._exceptions
-missing module named vms_lib - imported by platform, X:\AutoMaster\Main.py
-missing module named termios - imported by tty, getpass, X:\AutoMaster\Main.py
-missing module named urllib.splittag - imported by urllib, setuptools.py26compat
-missing module named grp - imported by shutil, tarfile, pathlib, distutils.archive_util, X:\AutoMaster\Main.py
-missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, pathlib, distutils.util, distutils.archive_util, netrc, getpass, X:\AutoMaster\Main.py
-missing module named _dummy_threading - imported by dummy_threading, X:\AutoMaster\Main.py
-missing module named org - imported by copy, X:\AutoMaster\Main.py
+missing module named pkg_resources.extern.six - imported by pkg_resources.extern, pkg_resources, setuptools.wheel
+missing module named 'multiprocessing.forking' - imported by /Users/sziaz0015/Git-Python/Python/venv/lib/python3.6/site-packages/PyInstaller/loader/rthooks/pyi_rth_multiprocessing.py
+missing module named 'org.python' - imported by pickle, setuptools.sandbox, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py, xml.sax
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
+missing module named _winreg - imported by platform, numpy.distutils.cpuinfo, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py, pkg_resources._vendor.appdirs
+missing module named java - imported by platform, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
+missing module named 'java.lang' - imported by platform, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
+missing module named winreg - imported by platform, mimetypes, distutils.msvccompiler, distutils.msvc9compiler, distutils._msvccompiler, numpy.distutils.cpuinfo, urllib.request, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
+missing module named nt - imported by shutil, os, ntpath, pathlib, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
+missing module named msvcrt - imported by subprocess, multiprocessing.spawn, multiprocessing.popen_spawn_win32, numpy.distutils.mingw32ccompiler, getpass, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
+missing module named _winapi - imported by subprocess, multiprocessing.reduction, multiprocessing.connection, multiprocessing.heap, multiprocessing.popen_spawn_win32, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
+missing module named _dummy_threading - imported by dummy_threading, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
+missing module named org - imported by copy, /同步/资料4Mac/运泰利in坚果/AutoMaster/Main.py
 missing module named cStringIO - imported by cPickle, pluginbase
 missing module named copy_reg - imported by cPickle, cStringIO, numpy.core
 missing module named numpy.lib.i0 - imported by numpy.lib, numpy.dual
@@ -51,21 +50,20 @@ missing module named 'numpy_distutils.command' - imported by numpy.f2py.diagnose
 missing module named numpy_distutils - imported by numpy.f2py.diagnose
 missing module named numpy.testing.memusage - imported by numpy.testing, numpy.f2py.f2py_testing
 missing module named numpy.testing.jiffies - imported by numpy.testing, numpy.f2py.f2py_testing
-missing module named setuptools_svn - imported by setuptools.command.egg_info
 missing module named 'setuptools.extern.six' - imported by setuptools, setuptools.extension
-missing module named certifi - imported by setuptools.ssl_support
+missing module named _manylinux - imported by setuptools.pep425tags
 missing module named wincertstore - imported by setuptools.ssl_support
 missing module named 'backports.ssl_match_hostname' - imported by setuptools.ssl_support
 missing module named backports - imported by setuptools.ssl_support
 missing module named urllib2 - imported by setuptools.package_index, numpy.lib._datasource
 missing module named 'pkg_resources.extern.packaging.version' - imported by setuptools.msvc
-missing module named 'setuptools.extern.six.moves' - imported by setuptools.dist, setuptools.command.easy_install, setuptools.sandbox, setuptools.command.setopt, setuptools.package_index, setuptools.ssl_support, setuptools.command.egg_info, setuptools.command.py36compat, setuptools.msvc
-missing module named setuptools.extern.six - imported by setuptools.extern, setuptools.monkey, setuptools.dist, setuptools.depends, setuptools.command.easy_install, setuptools.sandbox, setuptools.package_index, setuptools.command.bdist_egg, setuptools.command.egg_info, setuptools.command.sdist, setuptools.unicode_utils, setuptools.glob, setuptools.command.develop
+missing module named 'setuptools.extern.six.moves' - imported by setuptools.dist, setuptools.command.easy_install, setuptools.sandbox, setuptools.command.setopt, setuptools.package_index, setuptools.ssl_support, setuptools.command.egg_info, setuptools.command.py36compat, setuptools.namespaces, setuptools.msvc
+missing module named setuptools.extern.six - imported by setuptools.extern, setuptools.monkey, setuptools.dist, setuptools.py33compat, setuptools.config, setuptools.command.easy_install, setuptools.sandbox, setuptools.py27compat, setuptools.package_index, setuptools.command.egg_info, setuptools.command.sdist, setuptools.command.bdist_egg, setuptools.unicode_utils, setuptools.glob, setuptools.command.develop
+missing module named _findvs - imported by distutils._msvccompiler
 missing module named __svn_version__ - imported by numpy.f2py.__version__
 missing module named numarray - imported by numpy.distutils.system_info
 missing module named Numeric - imported by numpy.distutils.system_info
 missing module named commands - imported by numpy.distutils.cpuinfo
-missing module named _curses - imported by curses, curses.has_key
 missing module named 'nose.plugins' - imported by numpy.testing.nose_tools.noseclasses, numpy.testing.nose_tools.nosetester
 missing module named scipy - imported by numpy.testing.nose_tools.nosetester
 missing module named 'nose.util' - imported by numpy.testing.nose_tools.noseclasses
@@ -75,8 +73,10 @@ missing module named numpy.lib.imag - imported by numpy.lib, numpy.testing.nose_
 missing module named numpy.lib.real - imported by numpy.lib, numpy.testing.nose_tools.utils
 missing module named numpy.lib.iscomplexobj - imported by numpy.lib, numpy.testing.nose_tools.utils
 missing module named numpy.core.signbit - imported by numpy.core, numpy.testing.nose_tools.utils
+missing module named win32pdh - imported by numpy.testing.nose_tools.utils
 missing module named numpy.core.float64 - imported by numpy.core, numpy.testing.nose_tools.utils
 missing module named numpy.core.float32 - imported by numpy.core, numpy.testing.nose_tools.utils
+missing module named win32con - imported by distutils.msvccompiler
 missing module named numpy.core.integer - imported by numpy.core, numpy.fft.helper
 missing module named numpy.core.sqrt - imported by numpy.core, numpy.linalg.linalg, numpy.fft.fftpack
 missing module named numpy.core.conjugate - imported by numpy.core, numpy.fft.fftpack

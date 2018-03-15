@@ -38,7 +38,7 @@ class CNLang:
         try:
             return self.trans[msgid]
         except Exception as e:
-            logging.warning('Language Dict NotFound %s'%msgid)
+            logging.warning('LanguageDictNotFound "%s"'%msgid)
             return str(msgid)
 
 
@@ -65,7 +65,6 @@ class ENLang:
             return self.trans[msgid]
 
         except Exception as e:
-            logging.warning('Language Dict NotFound %s'%msgid)
             return str(msgid)
 
 
