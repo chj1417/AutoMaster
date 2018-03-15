@@ -4,72 +4,61 @@
 # 负责定义构建的界面可能的事件函数
 
 from Cmaster.Widget import *
-from Cmaster.Button import IconButton
+from Cmaster.Button import IconButton,TButton
 from Cmaster.HCore import Config
 from PyQt5 import QtCore, QtGui, QtWidgets
+from Cmaster.HCore import uitable,uibox
+import logging
+
+global langedit
+
+# 读取语言文件，注意encoding为utf-8
+def readlang(dictfile = './bin/Chinese.txt'):
+    f = open(dictfile, 'r',encoding='utf-8')
+    a = f.read()
+    trans = eval(a)
+    f.close()
+    return trans
+def e_load(para):
+    global langedit
+    files = uibox.openfiles('./bin/Chinese.txt')
+    for file in files:
+        dicli = readlang(file[0])
+        uitable.rlist(langedit, list(dicli.values()), list(dicli.keys()), file[1])
+def e_add(para):
+    print('add--')
+def e_del(para):
+    print('del---')
+def e_save(para):
+    print('save----')
+def e_close(para):
+    print('close-----')
 
 def on_lang(para):
 
     rootwin = para['root']
-    _dockWidget = QtWidgets.QDockWidget(rootwin)
-    _dockWidget.setObjectName("dockWidget")
-    _dockWidget.setWindowTitle("Language")
-    _dockWidgetContents = QtWidgets.QWidget()
-    _dockWidgetContents.setObjectName("dockWidgetContents")
-    #
-    _verticalLayout_2 = QtWidgets.QVBoxLayout(_dockWidgetContents)
-    _verticalLayout_2.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
-    _verticalLayout_2.setContentsMargins(12, 12, 12, 12)
-    _verticalLayout_2.setObjectName("verticalLayout_2")
-    _horizontalLayout = QtWidgets.QHBoxLayout()
-    _horizontalLayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
-    _horizontalLayout.setObjectName("horizontalLayout")
-    _tablelist = QtWidgets.QTableWidget(_dockWidgetContents)
-    _tablelist.setAutoScrollMargin(16)
-    _tablelist.setObjectName("tablelist")
-    _tablelist.setColumnCount(0)
-    _tablelist.setRowCount(0)
-    _horizontalLayout.addWidget(_tablelist)
-    _verticalLayout = QtWidgets.QVBoxLayout()
-    _verticalLayout.setObjectName("verticalLayout")
-    _openbtn = QtWidgets.QPushButton(_dockWidgetContents)
-    _openbtn.setObjectName("openbtn")
-    _verticalLayout.addWidget(_openbtn)
-    _addbtn = QtWidgets.QPushButton(_dockWidgetContents)
-    sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
-    sizePolicy.setHorizontalStretch(0)
-    sizePolicy.setVerticalStretch(0)
-    sizePolicy.setHeightForWidth(_addbtn.sizePolicy().hasHeightForWidth())
-    _addbtn.setSizePolicy(sizePolicy)
-    _addbtn.setObjectName("addbtn")
-    _verticalLayout.addWidget(_addbtn)
-    _delbtn = QtWidgets.QPushButton(_dockWidgetContents)
-    _delbtn.setObjectName("delbtn")
-    _verticalLayout.addWidget(_delbtn)
+    global langedit
+    # _tablelist = QtWidgets.QTableWidget(_dockWidgetContents)
+    langedit = QtWidgets.QTableWidget()
+    langedit.setAutoScrollMargin(16)
+    langedit.setObjectName("tablelist")
+    langedit.setColumnCount(0)
+    langedit.setRowCount(0)
+
+    _loadbtn_action = rootwin.add_action("load", "about", "Load Language File", False, 'tools','loadevent')
+    _addbtn_action = rootwin.add_action("add", "about", "Add one row", False, 'tools', 'addevent')
+    _delbtn_action = rootwin.add_action("del", "about", "Del one row", False, 'tools', 'delevent')
     spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-    _verticalLayout.addItem(spacerItem)
-    _savebtn = QtWidgets.QPushButton(_dockWidgetContents)
-    _savebtn.setObjectName("savebtn")
-    _verticalLayout.addWidget(_savebtn)
-    _exitbtn = QtWidgets.QPushButton(_dockWidgetContents)
-    _exitbtn.setObjectName("exitbtn")
-    _verticalLayout.addWidget(_exitbtn)
-    _horizontalLayout.addLayout(_verticalLayout)
-    _verticalLayout_2.addLayout(_horizontalLayout)
+    _savebtn_action = rootwin.add_action("save", "about", "Save to file", False, 'tools', 'saveevent')
+    _closebtn_action = rootwin.add_action("close", "about", "Close the window", False, 'tools', 'closeevent')
 
-    _openbtn.setToolTip("open")
-    _openbtn.setText("open")
-    _addbtn.setToolTip("add")
-    _addbtn.setText("add")
-    _delbtn.setToolTip("delrow")
-    _delbtn.setText("delrow")
-    _savebtn.setToolTip("save")
-    _savebtn.setText("save")
-    _exitbtn.setToolTip("exit")
-    _exitbtn.setText("exit")
+    itemls=[_loadbtn_action,_addbtn_action,_delbtn_action,spacerItem,_savebtn_action,_closebtn_action]
 
-    _dockWidget.setWidget(_dockWidgetContents)
-    rootwin.addDockWidget(2, _dockWidget)
+    docklay={
+        'H':[langedit,{"V":itemls}]
+    }
+
+    rootwin.auto_dock("Language",docklay)
 
 def on_license(para):
     # file = open('LICENSE', 'r')
@@ -81,7 +70,7 @@ def tools(para):
     mainwin=para['root']
     app=para['tools']
     # -------- Qbuttom ----------
-    # mainwin的函数add_action(caption, icon_name, status_tip, icon_visible, paraname,eventname, shortcut=None):
+    # mainwin的函数add_action(caption, icon_name, status_tip, icon_visible, appname,eventname, shortcut=None):
     _about_action = mainwin.add_action("Language", "about", "Program Language", True, 'tools','lang')
     # -------- Tab --------------
     about_tab = mainwin._ribbon.add_ribbon_tab("Tools")  # Tab Name-----------
@@ -100,4 +89,9 @@ def setup(app):
 def build(app):
     app.register_guis('8000 tools', tools)
     app.register_events('lang',on_lang)
-    # app.register_events('license',on_license)
+    app.register_events('loadevent',e_load)
+    app.register_events('addevent',e_add)
+    app.register_events('delevent',e_del)
+    app.register_events('saveevent',e_save)
+    app.register_events('closeevent',e_close)
+

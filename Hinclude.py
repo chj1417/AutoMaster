@@ -1,6 +1,23 @@
 # 负责插件系统的依赖
 
+from PyQt5 import QtCore, QtGui, QtWidgets
+
 from PyQt5.QtCore import *
-from PyQt5.QtGui import QKeySequence as QKSec
-from Cmaster.Button import IconButton
-from Cmaster.Textbox import Textbox
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
+
+
+from Cmaster.Button import *
+from Cmaster.Widget import *
+from Cmaster.Icons import *
+from Cmaster.Textbox import *
+from Cmaster.Widget import *
+
+from Cmaster.HCore import Config
+from Cmaster.HCore import uitable,uibox
+
+from pluginbase import PluginBase
+from functools import partial
+
+import os
+import logging

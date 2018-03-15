@@ -2,6 +2,9 @@
 # 负责主体窗体构建
 # 负责控件构建的公用部分，例如图标按键的add_acttion()
 
+from PyQt5 import QtWidgets
+
+from Cmaster.Button import TButton
 from Cmaster.Widget import *
 from Cmaster.HCore import Config
 from Cmaster.Icons import get_icon
@@ -61,7 +64,10 @@ def run_builder(app):
 def run_event(app,para):
     # 字典查询执行事件对应函数，并传递主体变量
     if app.events.__contains__(para):
-        app.events.get(para)(main1para)
+        try:
+            app.events.get(para)(main1para)
+        except TypeError as e:
+            logging.error(str(e)+' -CHJ-Event->%s'%para)
     else:
         logging.warning('NoRegister:%s'%para)
 
@@ -93,6 +99,45 @@ class MainWindow(QMainWindow):
             action.setShortcuts(shortcut)
         self.addAction(action)
         return action
+
+    def auto_layout(self,panel, autolay):
+        for laykey, list in autolay.items():
+            if laykey == 'V':
+                place = QtWidgets.QVBoxLayout()
+            else:
+                place = QtWidgets.QHBoxLayout()
+            for item in list:
+                if isinstance(item, QtWidgets.QSpacerItem):
+                    place.addItem(item)
+                elif isinstance(item,dict):
+                    self.auto_layout(place,item)
+                elif isinstance(item,QtWidgets.QTableWidget):
+                    place.addWidget(item)
+                elif isinstance(item,QtWidgets.QAction):
+                    place.addWidget(TButton(self, item))
+                else:
+                    logging.warning('No Def auto_layout Type %s '%type(item))
+            panel.addLayout(place)
+    def auto_dock(self,dockname,docklay):
+        "dockname,docklay{dict}"
+        _dockWidget = QtWidgets.QDockWidget(self)
+        _dockWidget.setObjectName("dockWidget")
+        _dockWidget.setWindowTitle(dockname)
+        _dockWidgetContents = QtWidgets.QWidget()
+        _dockWidgetContents.setObjectName("dockWidgetContents")
+        #当前顶层layout布局为默认垂直，作为主Widget的布局
+        mainlayout = QtWidgets.QVBoxLayout(_dockWidgetContents)
+        mainlayout.setSizeConstraint(QtWidgets.QLayout.SetDefaultConstraint)
+        mainlayout.setContentsMargins(12, 12, 12, 12)
+        #按照layout的dict字典拆包，自动布局控件
+        self.auto_layout(mainlayout, docklay)
+
+        # sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Fixed)
+        # sizePolicy.setHorizontalStretch(0)
+        # sizePolicy.setVerticalStretch(0)
+
+        _dockWidget.setWidget(_dockWidgetContents)
+        self.addDockWidget(2, _dockWidget)
 
 
     # def closeEvent(self, close_event):
