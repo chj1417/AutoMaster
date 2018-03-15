@@ -4,15 +4,20 @@
 
 from PyQt5 import QtWidgets
 
+from Cmaster.Icons import get_icon
 from Cmaster.Button import TButton
 from Cmaster.Widget import *
 from Cmaster.HCore import Config
-from Cmaster.Icons import get_icon
+# 导入语言本地化lo
+from Cmaster.HCore.language import lolang
 
 from pluginbase import PluginBase
 from functools import partial
 import os
 import logging
+
+# 语言本地化
+lo=lolang()
 
 # 将多个路径组合后返回os.path.join()：
 get_path = partial(os.path.join, os.getcwd()+'/Cmaster')
@@ -91,7 +96,7 @@ class MainWindow(QMainWindow):
 
     def add_action(self, caption, icon_name, status_tip, icon_visible, app_name,event_name, shortcut=None):
         "caption, icon_name, status_tip, icon_visible, app_name,event_name, shortcut=None"
-        action = QAction(get_icon(icon_name), caption, self)
+        action = QAction(get_icon(icon_name), lo.get(caption), self)
         action.setStatusTip(status_tip)
         action.triggered.connect(lambda :run_event(main1para[app_name],event_name))
         action.setIconVisibleInMenu(icon_visible)

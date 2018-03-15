@@ -4,7 +4,11 @@
 # 内置语言
 # 负责简单的输入窗口
 import os
-from PyQt5.QtWidgets import QMessageBox,QFileDialog,QDialog
+from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from numpy import unicode
+
 
 class Dlg(QDialog):
     #带输入edit控件的输入窗口,可自动输入last,可作为单项修改编辑窗

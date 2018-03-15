@@ -26,19 +26,28 @@ def e_load(para):
         dicli = readlang(file[0])
         uitable.rlist(langedit, list(dicli.values()), list(dicli.keys()), file[1])
 def e_add(para):
-    print('add--')
+    global langedit
+    word=uibox.input("add")
+    if word!=None:
+        li=[]
+        li.append(word)
+        uitable.rlist(langedit,[""],li)
 def e_del(para):
-    print('del---')
+    global langedit
+    uitable.delrow(langedit)
 def e_save(para):
-    print('save----')
-def e_close(para):
-    print('close-----')
+    global langedit
+    dicli = uitable.getcdict(langedit)
+    for fn in dicli.keys():
+        dictfile = "./bin/%s.txt" % fn
+        f = open(dictfile, 'w',encoding='utf-8')
+        f.write(str(dicli[fn]))
+        f.close()
 
 def on_lang(para):
-
     rootwin = para['root']
+
     global langedit
-    # _tablelist = QtWidgets.QTableWidget(_dockWidgetContents)
     langedit = QtWidgets.QTableWidget()
     langedit.setAutoScrollMargin(16)
     langedit.setObjectName("tablelist")
@@ -50,9 +59,8 @@ def on_lang(para):
     _delbtn_action = rootwin.add_action("del", "about", "Del one row", False, 'tools', 'delevent')
     spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
     _savebtn_action = rootwin.add_action("save", "about", "Save to file", False, 'tools', 'saveevent')
-    _closebtn_action = rootwin.add_action("close", "about", "Close the window", False, 'tools', 'closeevent')
 
-    itemls=[_loadbtn_action,_addbtn_action,_delbtn_action,spacerItem,_savebtn_action,_closebtn_action]
+    itemls=[_loadbtn_action,_addbtn_action,_delbtn_action,spacerItem,_savebtn_action]
 
     docklay={
         'H':[langedit,{"V":itemls}]
@@ -83,7 +91,7 @@ def demo(para):
     print('demo',para)
 #>>>>>>>>有待其他地方复用插件系统>>>>>>>
 def setup(app):
-    app.register_guis('00lowercase', demo)
+    app.register_guis('8000tools', demo)
 
 #插件负责界面构建函数和注册响应事件函数
 def build(app):
@@ -93,5 +101,4 @@ def build(app):
     app.register_events('addevent',e_add)
     app.register_events('delevent',e_del)
     app.register_events('saveevent',e_save)
-    app.register_events('closeevent',e_close)
 

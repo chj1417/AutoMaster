@@ -57,7 +57,7 @@ def home(para):
     mainwin=para['root']
     app=para['home']
     # -------------      actions       -----------------
-    _open_action = mainwin.add_action("Open", "open", "Open file", True, 'home', 'open', QKSec.Open)
+    _open_action = mainwin.add_action("open", "open", "Open file", True, 'home', 'open', QKSec.Open)
     _save_action = mainwin.add_action("Save", "save", "Save file", True, 'home', 'save', QKSec.Save)
     _copy_action = mainwin.add_action("Copy", "copy", "Copy selection", True, 'home', 'copy', QKSec.Copy)
     _paste_action = mainwin.add_action("Paste", "paste", "Paste from clipboard", True, 'home', 'paste', QKSec.Paste)

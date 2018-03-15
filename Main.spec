@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['Main.py'],
-             pathex=['/同步/资料4Mac/运泰利in坚果/AutoMaster', '/同步/资料4Mac/运泰利in坚果/AutoMaster'],
+             pathex=['X:\\AutoMaster', 'X:\\AutoMaster'],
              binaries=[],
              datas=[],
              hiddenimports=[],
@@ -26,4 +26,4 @@ exe = EXE(pyz,
           strip=False,
           upx=True,
           runtime_tmpdir=None,
-          console=True )
+          console=False , icon='X:\\AutoMaster\\Res\\main.ico')

@@ -14,10 +14,12 @@ from Cmaster.Textbox import *
 from Cmaster.Widget import *
 
 from Cmaster.HCore import Config
-from Cmaster.HCore import uitable,uibox
+from Cmaster.HCore import uitable,uibox,language
 
 from pluginbase import PluginBase
 from functools import partial
 
 import os
 import logging
+
+from numpy import *
