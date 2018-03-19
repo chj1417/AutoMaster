@@ -15,7 +15,7 @@ from Cmaster.Widget import *
 from Cmaster.Tree import *
 
 from Cmaster.HCore import Config
-from Cmaster.HCore import uitable,uibox,language
+from Cmaster.HCore import uitable,uibox,language,csv2tree
 
 from pluginbase import PluginBase
 from functools import partial

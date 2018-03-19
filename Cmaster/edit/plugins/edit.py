@@ -4,9 +4,7 @@
 # 负责定义构建的界面可能的事件函数
 
 # 导入Qt核心模块
-from PyQt5 import QtWidgets, QtCore
 
-from PyQt5.QtCore import *
 # 快捷键模块
 from PyQt5.QtGui import QKeySequence as QKSec
 
@@ -20,57 +18,68 @@ from Cmaster.Button import IconButton
 from Cmaster.Tree import TreeList
 #
 
-# from ..csv2tree import write as savetree
+from Cmaster.HCore import csv2tree as treedata
 
+#
+global tree
 # 定义编辑窗 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def edittree(para):
     rootwin=para['root']
     #
-    headtext=["seq", "name", "func", "message",'condition','goto']
-    ViewData=[
-        ['False','root','P1','P1name','P1func','P1mes','P1cond','P1goto'],
-        ['','root', 'P2', 'P2name', 'P2func', 'P2mes', 'P2cond', 'P2goto'],
-        ['0','root', 'P3', 'P3name', 'P3func', 'P3mes', 'P3cond', 'P3goto'],
-        ['1','root', 'P4', 'P4name', 'P4func', 'P4mes', 'P4cond', 'P4goto'],
-        ['1','C1', 'C0', 'C0name', 'C0func', 'C0mes', 'C0cond', 'C0goto'],
-        ['1','P0', 'C1', 'C1name', 'C1func', 'Cmes', 'Ccond', 'Cgoto'],
-        ['0','C1', 'C2', 'C2name', 'C2func', 'Cmes', 'Ccond', 'Cgoto'],
-        ['0','root', 'P0', 'P0name', 'P0func', 'P0mes', 'P0cond', 'P0goto'],
-    ]
+    global tree
+
+    headtext = treedata.rheader('./bin/sam.csv')
+    ViewData=treedata.rdata('./bin/sam.csv')
     # CheckBox不选的属性是'0'或空''或'false'
-    tree=TreeList(ViewData,headtext)
+    tree=TreeList(headtext[2:])
+    tree.setlist(ViewData)
+
     docklay={
         'V':[tree]
     }
     rootwin.auto_dock('editwin',docklay)
 
-# 定义事件函数>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-def on_open(para):
-    print('--==open==--')
+    # 定义事件函数>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+def on_revert(para):
+    global tree
+    ViewData = treedata.rdata('./bin/sam.csv')
+    tree.clear()
+    tree.setlist(ViewData)
     # return para[0]
-def on_save(para):
-    print('--==save==--')
+def on_commit(para):
+    global tree
+    treedata.wdata('./bin/sam.csv',tree.getlist(),tree.head)
     # return para[0]
-def on_copy(para):
-    print('--==copy==--')
+def on_clone(para):
+    global tree
+    tree.clonelist()
     # return para[0]
-def on_paste(para):
-    print('--==paste==--')
+def on_del(para):
+    global tree
+    tree.dellist()
+    # return para[0]
+def on_edit(para):
+    global tree
+    tree.editlist()
+    # return para[0]
+def on_up(para):
+    global tree
+    tree.moveup()
+    # return para[0]
+def on_down(para):
+    global tree
+    tree.movedown()
+    # return para[0]
+def on_ed(para):
+    global tree
+    tree.changestate()
+    # return para[0]
+def on_edall(para):
+    global tree
+    tree.changall()
     # return para[0]
 def on_zoom(para):
     print('--==zoom==--')
-    # return para[0]
-#----test box changed -----
-def on_textbox1_changed(para):
-    print('--==textbox1==--')
-    # return para[0]
-
-def on_textbox2_changed(para):
-    print('--==textbox2==--')
-    # return para[0]
-
-def on_textbox3_changed(para):
-    print('--==textbox3==--')
     # return para[0]
 
 def demoedit(para):
@@ -79,37 +88,37 @@ def edit(para):
     mainwin=para['root']
     app=para['edit']
     # -------------      actions       -----------------
-    _open_action = mainwin.add_action("Open", "open", "Open file", True, 'edit', 'open', QKSec.Open)
-    _save_action = mainwin.add_action("Save", "save", "Save file", True, 'edit', 'save', QKSec.Save)
-    _copy_action = mainwin.add_action("Copy", "copy", "Copy selection", True, 'edit', 'copy', QKSec.Copy)
-    _paste_action = mainwin.add_action("Paste", "paste", "Paste from clipboard", True, 'edit', 'paste', QKSec.Paste)
+    _commit_action = mainwin.add_action("commit", "save", "Commit All Data", True, 'edit', 'commit')
+    _revert_action = mainwin.add_action("revert", "open", "Revert From Last Commit", True, 'edit', 'revert')
+    _clone_action = mainwin.add_action("clone", "copy", "Clone Selection", True, 'edit', 'clone')
+    _delect_action = mainwin.add_action("delect", "paste", "Delect Selection", True, 'edit', 'del')
+    # _edit_action = mainwin.add_action("edit", "copy", "Edit selection", True, 'edit', 'edit')
+    _up_action = mainwin.add_action("moveup", "copy", "Move Selection Up", True, 'edit', 'up')
+    _down_action = mainwin.add_action("movedown", "save", "Move Selection Down", True, 'edit', 'down')
+    _ed_action = mainwin.add_action("enable", "copy", "Enable or Disable Selection", True, 'edit', 'ed')
+    _edall_action = mainwin.add_action("enableall", "save", "Enable or Disable All", True, 'edit', 'edall')
+
     _zoom_action = mainwin.add_action("Zoom", "zoom", "Zoom in on document", True, 'edit', 'zoom')
 
-    # ------ textboxes  其changed事件是直接传递了 ------------
-
-    _text_box1 = Textbox("Text 1", on_textbox1_changed, 80)
-    _text_box2 = Textbox("Text 2", on_textbox2_changed, 80)
-    _text_box3 = Textbox("Text 3", on_textbox3_changed, 80)
 
     # -------------      Tab and Pane     -----------------
     home_tab = mainwin._ribbon.add_ribbon_tab("Edit")
-    file_pane = home_tab.add_ribbon_pane("File")
+
+    file_pane = home_tab.add_ribbon_pane("Data")
 
     # -------------      IconButton     -------------------
-    file_pane.add_ribbon_widget(IconButton(mainwin, _open_action, True))
-    file_pane.add_ribbon_widget(IconButton(mainwin, _save_action, True))
+    file_pane.add_ribbon_widget(IconButton(mainwin, _commit_action, True))
+    file_pane.add_ribbon_widget(IconButton(mainwin, _revert_action, True))
     # -------------     Pane            -------------------
-    edit_panel = home_tab.add_ribbon_pane("Edit")
-    edit_panel.add_ribbon_widget(IconButton(mainwin, _copy_action, True))
-    edit_panel.add_ribbon_widget(IconButton(mainwin, _paste_action, True))
-    # -------------     GridWidget      -------------------
-    grid = edit_panel.add_grid_widget(200)
-    grid.addWidget(QLabel("Text box 1"), 1, 1)
-    grid.addWidget(QLabel("Text box 2"), 2, 1)
-    grid.addWidget(QLabel("Text box 3"), 3, 1)
-    grid.addWidget(_text_box1, 1, 2)
-    grid.addWidget(_text_box2, 2, 2)
-    grid.addWidget(_text_box3, 3, 2)
+    edit_panel = home_tab.add_ribbon_pane("Sequence")
+    edit_panel.add_ribbon_widget(IconButton(mainwin, _clone_action, True))
+    edit_panel.add_ribbon_widget(IconButton(mainwin, _delect_action, True))
+    # edit_panel.add_ribbon_widget(IconButton(mainwin, _edit_action, True))
+    edit_panel.add_ribbon_widget(IconButton(mainwin, _up_action, True))
+    edit_panel.add_ribbon_widget(IconButton(mainwin, _down_action, True))
+    edit_panel.add_ribbon_widget(IconButton(mainwin, _ed_action, True))
+    edit_panel.add_ribbon_widget(IconButton(mainwin, _edall_action, True))
+
     # -------------     Pane            -------------------
     view_panel = home_tab.add_ribbon_pane("View")
     view_panel.add_ribbon_widget(IconButton(mainwin, _zoom_action, True))
@@ -127,13 +136,15 @@ def setup(app):
 # 插件负责界面构建函数和注册响应事件函数(事件名称通过查询注册字典得到)
 def build(app):
     app.register_guis('1000 edit', edit)
-    app.register_events('open', on_open)
-    app.register_events('save', on_save)
-    app.register_events('copy', on_copy)
-    app.register_events('paste', on_paste)
+    app.register_events('revert', on_revert)
+    app.register_events('commit', on_commit)
+    app.register_events('clone', on_clone)
+    app.register_events('del', on_del)
+    # app.register_events('edit', on_edit)
+    app.register_events('up', on_up)
+    app.register_events('down', on_down)
+    app.register_events('ed', on_ed)
+    app.register_events('edall', on_edall)
+    #
     app.register_events('zoom', on_zoom)
-    #textbox1_changed
-    # app.register_events('textbox1_changed', on_textbox1_changed)
-    # app.register_events('textbox2_changed', on_textbox2_changed)
-    # app.register_events('textbox3_changed', on_textbox3_changed)
 
