@@ -16,23 +16,29 @@ from Cmaster.Widget import *
 from Cmaster.Textbox import Textbox
 # IconButtom图形按钮模块
 from Cmaster.Button import IconButton
+#
+from Cmaster.Tree import TreeList
+#
+
+# from ..csv2tree import write as savetree
 
 # 定义编辑窗 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def edittree(para):
     rootwin=para['root']
-    tree = QTreeWidget()
-    headerItem = QTreeWidgetItem(["seq", "name", "func", "message",'condition','goto'])
-    item = QTreeWidgetItem()
-    tree.setHeaderItem(headerItem)
-    for i in range(4):
-        parent = QTreeWidgetItem(tree)
-        parent.setText(0, "Parent {}".format(i))
-        parent.setFlags(parent.flags() | Qt.ItemIsTristate | Qt.ItemIsUserCheckable)
-        for x in range(5):
-            child = QTreeWidgetItem(parent)
-            child.setFlags(child.flags() | Qt.ItemIsUserCheckable)
-            child.setText(0, "Child {}".format(x))
-            child.setCheckState(0, Qt.Unchecked)
+    #
+    headtext=["seq", "name", "func", "message",'condition','goto']
+    ViewData=[
+        ['False','root','P1','P1name','P1func','P1mes','P1cond','P1goto'],
+        ['','root', 'P2', 'P2name', 'P2func', 'P2mes', 'P2cond', 'P2goto'],
+        ['0','root', 'P3', 'P3name', 'P3func', 'P3mes', 'P3cond', 'P3goto'],
+        ['1','root', 'P4', 'P4name', 'P4func', 'P4mes', 'P4cond', 'P4goto'],
+        ['1','C1', 'C0', 'C0name', 'C0func', 'C0mes', 'C0cond', 'C0goto'],
+        ['1','P0', 'C1', 'C1name', 'C1func', 'Cmes', 'Ccond', 'Cgoto'],
+        ['0','C1', 'C2', 'C2name', 'C2func', 'Cmes', 'Ccond', 'Cgoto'],
+        ['0','root', 'P0', 'P0name', 'P0func', 'P0mes', 'P0cond', 'P0goto'],
+    ]
+    # CheckBox不选的属性是'0'或空''或'false'
+    tree=TreeList(ViewData,headtext)
     docklay={
         'V':[tree]
     }

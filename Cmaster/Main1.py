@@ -83,6 +83,7 @@ class MainWindow(QMainWindow):
         self.resize(1280, 800)
         self.setWindowTitle("Main Window %s"%Config.read_key('Main','Title','AutoMaster'))
         self.setDockNestingEnabled(True)
+        self.setStyleSheet(get_stylesheet("Main"))
         self.setWindowIcon(get_icon("icon"))
         # 状态栏----
         self.statusbar = QtWidgets.QStatusBar()

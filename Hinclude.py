@@ -12,6 +12,7 @@ from Cmaster.Widget import *
 from Cmaster.Icons import *
 from Cmaster.Textbox import *
 from Cmaster.Widget import *
+from Cmaster.Tree import *
 
 from Cmaster.HCore import Config
 from Cmaster.HCore import uitable,uibox,language

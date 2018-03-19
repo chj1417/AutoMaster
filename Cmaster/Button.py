@@ -48,19 +48,19 @@ class TButton(QPushButton):
         self.clicked.connect(self._actionOwner.trigger)
         self._actionOwner.changed.connect(self.update_button_status_from_action)
 
-        # if isbig:
+        if isbig:
         #     self.setMaximumWidth(80 * sc)
         #     self.setMinimumWidth(50 * sc)
         #     self.setMinimumHeight(75 * sc)
         #     self.setMaximumHeight(80 * sc)
-        #     self.setStyleSheet(get_stylesheet("BigButton"))
+            self.setStyleSheet(get_stylesheet("BigButton"))
         #     self.setToolButtonStyle(3)
         #     self.setIconSize(QSize(32 * sc, 32 * sc))
-        # else:
+        else:
         #     self.setToolButtonStyle(2)
         #     self.setMaximumWidth(120 * sc)
         #     self.setIconSize(QSize(16 * sc, 16 * sc))
-        #     self.setStyleSheet(get_stylesheet("SmallButton"))
+            self.setStyleSheet(get_stylesheet("SmallButton"))
 
     def update_button_status_from_action(self):
         self.setText(self._actionOwner.text())

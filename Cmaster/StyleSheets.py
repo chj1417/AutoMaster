@@ -12,11 +12,13 @@ def get_stylesheet(name):
 class Stylesheets(object):
     def __init__(self):
         self._stylesheets = {}
-        self.make_stylesheet("main", "Cmaster/stylesheets/main.css")
+        self.make_stylesheet("Main", "Cmaster/stylesheets/Main.css")
         self.make_stylesheet("Widget", "Cmaster/stylesheets/Widget.css")
         self.make_stylesheet("Pane", "Cmaster/stylesheets/Pane.css")
         self.make_stylesheet("BigButton", "Cmaster/stylesheets/BigButton.css")
         self.make_stylesheet("SmallButton", "Cmaster/stylesheets/SmallButton.css")
+        self.make_stylesheet("TreeView", "Cmaster/stylesheets/TreeView.css")
+
 
     def make_stylesheet(self, name, path):
         with open(path) as data_file:
