@@ -97,8 +97,8 @@ def tools(para):
     app=para['tools']
     # -------- Qbuttom ----------
     # mainwin的函数add_action(caption, icon_name, status_tip, icon_visible, appname,eventname, shortcut=None):
-    _about_action = mainwin.add_action("language", "about", "Program Language", True, 'tools','lang')
-    _sample_action = mainwin.add_action("sample", "about", "sample for ui", True, 'tools','sample')
+    _about_action = mainwin.add_action("language", "database", "Program Language", True, 'tools','lang')
+    _sample_action = mainwin.add_action("sample", "sample", "sample for ui", True, 'tools','sample')
     # -------- Tab --------------
     about_tab = mainwin._ribbon.add_ribbon_tab("Tools")  # Tab Name-----------
     info_panel = about_tab.add_ribbon_pane("Tools")  #Pane Name----------------

@@ -2,7 +2,7 @@
 # 负责树的编辑
 
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QTreeWidget, QTreeWidgetItem, QTreeWidgetItemIterator
+from PyQt5.QtWidgets import QTreeWidget, QTreeWidgetItem, QTreeWidgetItemIterator, QAbstractItemView
 from Cmaster.StyleSheets import get_stylesheet
 import logging
 
@@ -16,6 +16,16 @@ class TreeList(QTreeWidget):
         self.setHeaderItem(headerItem)
         # self.editbox=[] #可双击编辑
 
+        # 拖拽模式，有待定义允许的操作与不允许的操作>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        # self.setDefaultDropAction(Qt.MoveAction)
+        # self.setDragDropMode(QAbstractItemView.InternalMove)
+
+    # def dragMoveEvent(self, QDragMoveEvent):
+    #     print(self.dropIndicatorPosition())
+    #     if self.dropIndicatorPosition()==2:
+    #         QDragMoveEvent.accept()
+    #     else:
+    #         QDragMoveEvent.ignore()
     def setlist(self,dat,pa=None):
         if pa is None:
             itempa={'root':self}

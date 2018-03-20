@@ -24,7 +24,10 @@ class Icons(object):
         self.make_icon("copy", "Cmaster/icons/copy.png")
         self.make_icon("about", "Cmaster/icons/about.png")
         self.make_icon("license", "Cmaster/icons/license.png")
-        self.make_icon("default", "Cmaster/icons/folder.png")
+        self.make_icon("default", "Cmaster/icons/default.png")
+        self.make_icon("database", "Cmaster/icons/database.png")
+        self.make_icon("sample", "Cmaster/icons/sample.png")
+
 
     def make_icon(self, name, path):
         icon = QIcon()

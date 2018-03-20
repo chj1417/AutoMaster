@@ -93,10 +93,10 @@ def edit(para):
     _clone_action = mainwin.add_action("clone", "copy", "Clone Selection", True, 'edit', 'clone')
     _delect_action = mainwin.add_action("delect", "paste", "Delect Selection", True, 'edit', 'del')
     # _edit_action = mainwin.add_action("edit", "copy", "Edit selection", True, 'edit', 'edit')
-    _up_action = mainwin.add_action("moveup", "copy", "Move Selection Up", True, 'edit', 'up')
-    _down_action = mainwin.add_action("movedown", "save", "Move Selection Down", True, 'edit', 'down')
-    _ed_action = mainwin.add_action("enable", "copy", "Enable or Disable Selection", True, 'edit', 'ed')
-    _edall_action = mainwin.add_action("enableall", "save", "Enable or Disable All", True, 'edit', 'edall')
+    _up_action = mainwin.add_action("moveup", "moveup", "Move Selection Up", True, 'edit', 'up')
+    _down_action = mainwin.add_action("movedown", "movedown", "Move Selection Down", True, 'edit', 'down')
+    _ed_action = mainwin.add_action("enable", "ed", "Enable or Disable Selection", True, 'edit', 'ed')
+    _edall_action = mainwin.add_action("enableall", "edall", "Enable or Disable All", True, 'edit', 'edall')
 
     _zoom_action = mainwin.add_action("Zoom", "zoom", "Zoom in on document", True, 'edit', 'zoom')
 
