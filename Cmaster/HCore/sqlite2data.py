@@ -1,3 +1,7 @@
+# 负责对接数据库sqlite3
+# 每个文件为一个类实例
+# 类记录，上次的Tablename和Header长度
+# 数据库操作更简易化
 import sqlite3
 import logging
 

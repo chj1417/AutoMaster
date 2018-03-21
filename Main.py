@@ -11,6 +11,7 @@ import logging
 import JCheck
 from PyQt5 import QtWidgets
 from Hinclude import *
+import codecs
 
 # from PyQt5.QtCore import QTranslator
 
@@ -37,8 +38,7 @@ inifile=maindir+'/bin/CoreConfig.ini'
 
 def check_ini(section,key,value):
     if (not os.path.exists(inifile)):
-        inif = open(inifile, "w",encoding='UTF-8')
-        inif.close()
+        codecs.open(inifile, 'w', 'utf-8')
     cf = configparser.ConfigParser()
     cf.read(inifile,encoding='UTF-8')
     if (not cf.has_option(section,key)):
@@ -46,7 +46,7 @@ def check_ini(section,key,value):
             cf.add_section(section)
         cf.set(section,key,value)
         if value!='':
-            cf.write(open(inifile, "w",encoding='UTF-8'))
+            cf.write(codecs.open(inifile, 'w', 'utf-8'))
         logging.warning("[NewConfig %s ] %s ='%s'" %(section,key,value))
     return cf
 
@@ -60,7 +60,7 @@ def write_ini(section, key, value):
     cf=check_ini(section,key,'')
     cf.set(section, key, value)
     # write to file
-    cf.write(open(inifile, "w"))
+    cf.write(codecs.open(inifile, 'w', 'utf-8'))
 
 if __name__ == '__main__':
     #去除警告
