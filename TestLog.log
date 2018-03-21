@@ -1,20 +1,20 @@
-21,15:17:26 Main.py[<module>:73] INFO Sys cmd0 ./bin/main
-21,15:17:26 Main.py[<module>:82] INFO ***version 3***
-21,15:17:26 Main.py[<module>:135] INFO Loading Success
-21,15:17:26 Main1.py[run_builder:59] INFO -=Runing      home=-
-21,15:17:26 language.py[get:41] WARNING LanguageDictNotFound "copy"
-21,15:17:26 language.py[get:41] WARNING LanguageDictNotFound "paste"
-21,15:17:26 language.py[get:41] WARNING LanguageDictNotFound "zoom"
-21,15:17:26 Main1.py[run_builder:68] INFO ==BuildList==['0000 home']
-21,15:17:26 Main1.py[run_builder:59] INFO -=Runing      edit=-
-21,15:17:26 language.py[get:41] WARNING LanguageDictNotFound "Zoom"
-21,15:17:26 sqlite2data.py[headlist:30] INFO [(0, 'RunOrNot', '', 0, None, 0), (1, 'Tree', '', 0, None, 0), (2, 'seq', '', 0, None, 0), (3, 'name', '', 0, None, 0), (4, 'func', '', 0, None, 0), (5, 'message', '', 0, None, 0), (6, 'condition', '', 0, None, 0), (7, 'goto', '', 0, None, 0)]
-21,15:17:26 Main1.py[run_builder:68] INFO ==BuildList==['1000 edit']
-21,15:17:26 Main1.py[run_builder:59] INFO -=Runing     tools=-
-21,15:17:26 language.py[get:41] WARNING LanguageDictNotFound "language"
-21,15:17:26 language.py[get:41] WARNING LanguageDictNotFound "sample"
-21,15:17:26 Main1.py[run_builder:68] INFO ==BuildList==['8000 tools']
-21,15:17:26 Main1.py[run_builder:59] INFO -=Runing     about=-
-21,15:17:26 language.py[get:41] WARNING LanguageDictNotFound "About"
-21,15:17:27 language.py[get:41] WARNING LanguageDictNotFound "License"
-21,15:17:27 Main1.py[run_builder:68] INFO ==BuildList==['9000 about']
+21,15:33:16 Main.py[<module>:73] INFO Sys cmd0 ./bin/main
+21,15:33:16 Main.py[<module>:82] INFO ***version 3***
+21,15:33:16 Main.py[<module>:135] INFO Loading Success
+21,15:33:16 Main1.py[run_builder:59] INFO -=Runing      home=-
+21,15:33:16 language.py[get:41] WARNING LanguageDictNotFound "copy"
+21,15:33:16 language.py[get:41] WARNING LanguageDictNotFound "paste"
+21,15:33:16 language.py[get:41] WARNING LanguageDictNotFound "zoom"
+21,15:33:16 Main1.py[run_builder:68] INFO ==BuildList==['0000 home']
+21,15:33:16 Main1.py[run_builder:59] INFO -=Runing      edit=-
+21,15:33:16 language.py[get:41] WARNING LanguageDictNotFound "Zoom"
+21,15:33:16 sqlite2data.py[headlist:30] INFO [(0, 'RunOrNot', '', 0, None, 0), (1, 'Tree', '', 0, None, 0), (2, 'seq', '', 0, None, 0), (3, 'name', '', 0, None, 0), (4, 'func', '', 0, None, 0), (5, 'message', '', 0, None, 0), (6, 'condition', '', 0, None, 0), (7, 'goto', '', 0, None, 0)]
+21,15:33:16 Main1.py[run_builder:68] INFO ==BuildList==['1000 edit']
+21,15:33:16 Main1.py[run_builder:59] INFO -=Runing     tools=-
+21,15:33:16 language.py[get:41] WARNING LanguageDictNotFound "language"
+21,15:33:16 language.py[get:41] WARNING LanguageDictNotFound "sample"
+21,15:33:16 Main1.py[run_builder:68] INFO ==BuildList==['8000 tools']
+21,15:33:16 Main1.py[run_builder:59] INFO -=Runing     about=-
+21,15:33:16 language.py[get:41] WARNING LanguageDictNotFound "About"
+21,15:33:16 language.py[get:41] WARNING LanguageDictNotFound "License"
+21,15:33:16 Main1.py[run_builder:68] INFO ==BuildList==['9000 about']
