@@ -19,20 +19,24 @@ from Cmaster.Tree import TreeList
 #
 
 from Cmaster.HCore import csv2tree as treedata
-
+from Cmaster.HCore.sqlite2data import DBfile
 #
 global tree
+treedb = DBfile('./bin/temp.db')
 # 定义编辑窗 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def edittree(para):
     rootwin=para['root']
     #
     global tree
+    #
+    # headtext = treedata.rheader('./bin/sam.csv')
+    # ViewData=treedata.rdata('./bin/sam.csv')
+    # tree = TreeList(headtext[2:])
+    # tree.setlist(ViewData)
+    #
 
-    headtext = treedata.rheader('./bin/sam.csv')
-    ViewData=treedata.rdata('./bin/sam.csv')
-    # CheckBox不选的属性是'0'或空''或'false'
-    tree=TreeList(headtext[2:])
-    tree.setlist(ViewData)
+    tree=TreeList(treedb.headlist('edit'))
+    tree.setlist(treedb.read('edit'))
 
     docklay={
         'V':[tree]
@@ -42,13 +46,18 @@ def edittree(para):
     # 定义事件函数>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def on_revert(para):
     global tree
-    ViewData = treedata.rdata('./bin/sam.csv')
+    # ViewData = treedata.rdata('./bin/sam.csv')
+    ViewData=treedb.read('edit')
     tree.clear()
     tree.setlist(ViewData)
     # return para[0]
 def on_commit(para):
     global tree
-    treedata.wdata('./bin/sam.csv',tree.getlist(),tree.head)
+    #
+    # treedata.wdata('./bin/sam.csv',tree.getlist(),tree.head)
+    #
+    # treedb = DBfile('./bin/temp.db')
+    treedb.write(tree.getlist(),'edit')
     # return para[0]
 def on_clone(para):
     global tree

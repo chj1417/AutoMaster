@@ -2,6 +2,7 @@
 #负责csv文件与Tree数据对接（仅数据及数据结构）
 
 import csv
+from Cmaster.HCore.sqlite2data import DBfile as db
 
 # headtext=['RunOrNot','Tree',"seq", "name", "func", "message",'condition','goto']
 
@@ -12,6 +13,7 @@ def wdata(TreeFile,TreeData,TreeHeader):
         headtext.extend(TreeHeader)
         # for row in datas:
         writer.writerow(headtext)
+
         # 还可以写入多行
         writer.writerows(TreeData)
 

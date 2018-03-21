@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d1b2b31-7038-46e9-be39-3c2fedbb9978" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Cmaster/HCore/sqlite2data.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Cmaster/Icons.py" afterPath="$PROJECT_DIR$/Cmaster/Icons.py" />
-      <change beforePath="$PROJECT_DIR$/Cmaster/Tree.py" afterPath="$PROJECT_DIR$/Cmaster/Tree.py" />
+      <change beforePath="$PROJECT_DIR$/Cmaster/HCore/csv2tree.py" afterPath="$PROJECT_DIR$/Cmaster/HCore/csv2tree.py" />
       <change beforePath="$PROJECT_DIR$/Cmaster/edit/plugins/edit.py" afterPath="$PROJECT_DIR$/Cmaster/edit/plugins/edit.py" />
-      <change beforePath="$PROJECT_DIR$/Cmaster/icons/icon-bak.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Cmaster/stylesheets/TreeView.css" afterPath="$PROJECT_DIR$/Cmaster/stylesheets/TreeView.css" />
-      <change beforePath="$PROJECT_DIR$/Cmaster/tools/plugins/tools.py" afterPath="$PROJECT_DIR$/Cmaster/tools/plugins/tools.py" />
       <change beforePath="$PROJECT_DIR$/TestLog.log" afterPath="$PROJECT_DIR$/TestLog.log" />
+      <change beforePath="$PROJECT_DIR$/bin/Main" afterPath="$PROJECT_DIR$/bin/Main" />
       <change beforePath="$PROJECT_DIR$/bin/sam.csv" afterPath="$PROJECT_DIR$/bin/sam.csv" />
       <change beforePath="$PROJECT_DIR$/build/Main/base_library.zip" afterPath="$PROJECT_DIR$/build/Main/base_library.zip" />
       <change beforePath="$PROJECT_DIR$/build/Main/out00-Analysis.toc" afterPath="$PROJECT_DIR$/build/Main/out00-Analysis.toc" />
@@ -19,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/build/Main/out00-PYZ.pyz" afterPath="$PROJECT_DIR$/build/Main/out00-PYZ.pyz" />
       <change beforePath="$PROJECT_DIR$/build/Main/out00-PYZ.toc" afterPath="$PROJECT_DIR$/build/Main/out00-PYZ.toc" />
       <change beforePath="$PROJECT_DIR$/build/Main/warnMain.txt" afterPath="$PROJECT_DIR$/build/Main/warnMain.txt" />
+      <change beforePath="$PROJECT_DIR$/build/Main/xref-Main.html" afterPath="$PROJECT_DIR$/build/Main/xref-Main.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,12 +28,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Main.py">
+      <file leaf-file-name="edit.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Cmaster/edit/plugins/edit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="69" column="17" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state relative-caret-position="572">
+              <caret line="49" column="30" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+              <folding>
+                <element signature="e#80#125#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="csv2tree.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cmaster/HCore/csv2tree.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-45">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="50" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sqlite2data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cmaster/HCore/sqlite2data.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="70" column="45" lean-forward="false" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,7 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/GUI/MainWindow.py" />
         <option value="$PROJECT_DIR$/Cmaster/GUI/StyleSheets.py" />
         <option value="$PROJECT_DIR$/Cmaster/GUI/RibbonButton.py" />
         <option value="$PROJECT_DIR$/Cmaster/GUI/Icons.py" />
@@ -103,13 +125,14 @@
         <option value="$PROJECT_DIR$/Cmaster/stylesheets/Main.css" />
         <option value="$PROJECT_DIR$/Cmaster/edit/csv2tree.py" />
         <option value="$PROJECT_DIR$/Hinclude.py" />
-        <option value="$PROJECT_DIR$/Cmaster/HCore/csv2tree.py" />
         <option value="$PROJECT_DIR$/Cmaster/Widget.py" />
         <option value="$PROJECT_DIR$/Cmaster/Icons.py" />
-        <option value="$PROJECT_DIR$/Cmaster/edit/plugins/edit.py" />
         <option value="$PROJECT_DIR$/Cmaster/tools/plugins/tools.py" />
         <option value="$PROJECT_DIR$/Cmaster/stylesheets/TreeView.css" />
         <option value="$PROJECT_DIR$/Cmaster/Tree.py" />
+        <option value="$PROJECT_DIR$/Cmaster/HCore/csv2tree.py" />
+        <option value="$PROJECT_DIR$/Cmaster/HCore/sqlite2data.py" />
+        <option value="$PROJECT_DIR$/Cmaster/edit/plugins/edit.py" />
       </list>
     </option>
   </component>
@@ -143,6 +166,30 @@
             <path>
               <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
               <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+              <item name="Cmaster" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+              <item name="Cmaster" type="462c0819:PsiDirectoryNode" />
+              <item name="edit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+              <item name="Cmaster" type="462c0819:PsiDirectoryNode" />
+              <item name="edit" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AutoMaster" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AutoMaster" type="462c0819:PsiDirectoryNode" />
+              <item name="Cmaster" type="462c0819:PsiDirectoryNode" />
+              <item name="HCore" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -230,19 +277,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="main 2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sqlite2data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cmaster/HCore" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="AutoMaster" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main 2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cmaster/HCore/sqlite2data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -268,18 +315,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.main 2" />
-      <item index="2" class="java.lang.String" itemvalue="Python.MainWindow" />
-      <item index="3" class="java.lang.String" itemvalue="Python.treeview" />
-      <item index="4" class="java.lang.String" itemvalue="Python.csv2tree" />
+      <item index="1" class="java.lang.String" itemvalue="Python.MainWindow" />
+      <item index="2" class="java.lang.String" itemvalue="Python.treeview" />
+      <item index="3" class="java.lang.String" itemvalue="Python.csv2tree" />
+      <item index="4" class="java.lang.String" itemvalue="Python.sqlite2data" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.csv2tree" />
-        <item index="2" class="java.lang.String" itemvalue="Python.treeview" />
-        <item index="3" class="java.lang.String" itemvalue="Python.MainWindow" />
-        <item index="4" class="java.lang.String" itemvalue="Python.main 2" />
+        <item index="1" class="java.lang.String" itemvalue="Python.sqlite2data" />
+        <item index="2" class="java.lang.String" itemvalue="Python.csv2tree" />
+        <item index="3" class="java.lang.String" itemvalue="Python.treeview" />
+        <item index="4" class="java.lang.String" itemvalue="Python.MainWindow" />
       </list>
     </recent_temporary>
   </component>
@@ -333,10 +380,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Cmaster/app1/plugins/secret.py" />
-    <entry file="file://$PROJECT_DIR$/Cmaster/builtin_plugins/uppercase.py" />
-    <entry file="file://$PROJECT_DIR$/EventMan.py" />
-    <entry file="file://$PROJECT_DIR$/Cmaster/Event.py" />
     <entry file="file://$PROJECT_DIR$/Cmaster/builtin_plugins/lowercase.py" />
     <entry file="file://$PROJECT_DIR$/Cmaster/about/plugins/secret.py" />
     <entry file="file://$PROJECT_DIR$/Cmaster/home/plugins/randomstr.py" />
@@ -392,14 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="26" lean-forward="false" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/uibox.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="34" column="31" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -492,14 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/csv2tree.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cmaster/Widget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -574,16 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cmaster/edit/plugins/edit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="98" column="58" lean-forward="false" selection-start-line="98" selection-start-column="58" selection-end-line="98" selection-end-column="58" />
-          <folding>
-            <element signature="e#80#125#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cmaster/Main1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
@@ -603,11 +620,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/uibox.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="34" column="31" lean-forward="false" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/test.db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/test1.db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/test20.db">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="69" column="17" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state relative-caret-position="185">
+          <caret line="68" column="22" lean-forward="true" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/sqlite2data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="70" column="45" lean-forward="false" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/HCore/csv2tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cmaster/edit/plugins/edit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="49" column="30" lean-forward="false" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+          <folding>
+            <element signature="e#80#125#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
